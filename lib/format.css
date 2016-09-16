@@ -1,0 +1,46 @@
+.header  li {
+	font-weight: bold;
+	display: inline-block;
+	padding: 20px;
+}
+
+.content {
+	padding: 20px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.header  li:hover {
+	background-color: #66ffff;
+}
+
+.header {
+	background-color: #4d4dff;
+	border-bottom: solid;
+	margin-top: 0px;
+}
+
+.leftHead {
+	margin-left:10px;
+}
+
+textarea {
+	resize: none;
+}
+
+.emailInput {
+	list-style-type: none;
+}
+
+.submitEmailButton {
+	background-color: 'black';
+	font-size: 1em;
+	color: 'white';
+	padding: 7px 15px;
+	text-align: "center";
+}
+
+.emailElements {
+	width: 600px;
+	height: 400px;
+}
