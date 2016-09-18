@@ -15,7 +15,7 @@ var ContactForm = React.createClass({
 						value={this.props.body} 
 						onChange={this.props.handleEmailBodyChange}>
 					</textarea>
-					<button style={{float: 'right'}} className="submitEmailButton">
+					<button type="submit" style={{float: 'right'}} className="submitEmailButton">
 						Submit
 					</button>
 				</form>

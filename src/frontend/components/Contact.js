@@ -16,13 +16,27 @@ var Contact = React.createClass({
 	},
 	
 	handleSubmit: function() {
+		var request = new XMLHttpRequest();
+		request.open('POST', 'localhost:8000/hello');
 		
+		request.onload = function(e) {
+			alert('callback!');
+			if (request.status === 200) {
+				alert('successful post' + request.responseText);
+			}
+			else {
+				alert('post not successful');
+			}
+		};
+		// send the request and reset state
+		alert('sending info');
+		request.send(JSON.stringify(this.state));
 		this.setState({subject:"", body:""});
 	},
 	
 	render: function() {
 		return (
-			<ContactForm onSubmit={this.handleSubmit} 
+			<ContactForm handleSubmit={this.handleSubmit} 
 						 subject={this.state.subject} 
 						 body={this.state.body}
 						 handleEmailBodyChange={this.handleEmailBodyChange}

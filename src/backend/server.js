@@ -3,19 +3,21 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
-var nodeMailer = require('nodemailer');
+//var nodeMailer = require('nodemailer');
+
+var express        =         require("express");
+var bodyParser     =         require("body-parser");
+var app            =         express();
 
 app.use(express.static(path.join(__dirname, '../../lib')));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function(req, res) {
 	res.sendFile(path.join(__dirname,'../../index.html'));
 });
 
-var router = express.Router();
-app.use('/sayHello', router);
-router.post('localhost:8000/hello', function(req, res) {
+app.post('/hello', function(req, res) {
 	console.log("submit");
 	res.send("test");
 	/*var transporter = nodemailer.createTransport({
