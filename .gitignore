@@ -46,5 +46,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-#my ignore
 node_modules/
+*.log

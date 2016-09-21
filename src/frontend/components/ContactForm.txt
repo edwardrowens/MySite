@@ -1,7 +1,0 @@
-var React = require('react');
-
-var ContactForm = React.createClass() {
-	re
-};
-
-module.exports = ContactForm;
