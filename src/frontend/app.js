@@ -7,6 +7,7 @@ var Resume = require('./components/Resume');
 var Portfolio = require('./components/Portfolio');
 var Header = require('./components/Header');
 var Contact = require('./components/Contact');
+var Footer = require('./components/Footer');
 
 var Application = React.createClass({
 	render: function() {
@@ -16,6 +17,7 @@ var Application = React.createClass({
 				<div className="content">
 					{this.props.children}
 				</div>
+				<Footer/>
 			</div>
 		);
 	}

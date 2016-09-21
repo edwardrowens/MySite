@@ -4,12 +4,6 @@
 	padding: 20px;
 }
 
-.content {
-	padding: 20px;
-	margin-left: 50px;
-	margin-right: 50px;
-}
-
 .header  li:hover {
 	background-color: #66ffff;
 }
@@ -24,23 +18,56 @@
 	margin-left:10px;
 }
 
+.content {
+	padding-left: 20px;
+}
+
 textarea {
 	resize: none;
 }
 
-.emailInput {
+.emailForm {
 	list-style-type: none;
+	width: 605px;
+	height: 500px;
+}
+
+.body {
+	width: 600px;
+	height: 340px;
+}
+
+.subject {
+	width: 300px;
+	height: 24px;
+	margin-bottom:5px;
 }
 
 .submitEmailButton {
-	background-color: 'black';
+	border-radius: 5px;
+	border-style:solid;
+	background-color: #000000;
 	font-size: 1em;
-	color: 'white';
-	padding: 7px 15px;
+	color: #ffffff;
 	text-align: "center";
+	height: 45px;
+	width: 100px;
+	margin-top:5px;
 }
 
-.emailElements {
-	width: 600px;
-	height: 400px;
+.footerText {
+	font-size:.9em;
+	color: #ffffff;
+}
+
+.footer {
+	text-align:center;
+	background-color: #000000;
+	position:fixed;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 35px;
+	bottom: 0px;
+	right: 0px;
 }
