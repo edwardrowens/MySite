@@ -17,15 +17,15 @@ var Contact = React.createClass({
 	
 	handleSubmit: function() {
 		var request = new XMLHttpRequest();
-		request.open('POST', 'localhost:8000/hello');
-		
-		request.onload = function(e) {
+		request.open('POST', '/hello');
+		request.setRequestHeader('Content-Type', 'application/json');
+		request.onload = function() {
 			alert('callback!');
 			if (request.status === 200) {
-				alert('successful post' + request.responseText);
+				alert('successful post: ' + request.responseText);
 			}
 			else {
-				alert('post not successful');
+				alert('post not successful ' + request.status);
 			}
 		};
 		// send the request and reset state
