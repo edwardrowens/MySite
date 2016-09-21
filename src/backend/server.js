@@ -1,5 +1,5 @@
 var path = require('path');
-//var nodeMailer = require('nodemailer');
+var nodeMailer = require('nodemailer');
 var express = require("express");
 var bodyParser = require("body-parser");
 var app = express();
@@ -17,7 +17,7 @@ app.post('/hello', function(req, res) {
 	console.log(req.url);
 	console.log(JSON.stringify(req.body));
 	res.send("test");
-	/*var transporter = nodemailer.createTransport({
+	var transporter = nodemailer.createTransport({
 		service: 'Gmail',
 		auth: {
 			user: 'eddiereactpractice@gmail.com',
@@ -40,7 +40,7 @@ app.post('/hello', function(req, res) {
 			console.log('message sent');
 			res.json({yo: info.response});
 		}
-	});*/
+	});
 });
 
 console.log("Server started");
