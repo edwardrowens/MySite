@@ -6,8 +6,9 @@ var Home = require('./Home');
 var Header = React.createClass({
 	render : function() {
 	return (
-		<div>
-			<ul className="header">
+		<div className="header">
+			<img className = "logo" src='http://localhost:8000/assets/logo.jpg'/>
+			<ul className="headerLinks">
 				<Router.IndexLink to="/home" style={{textDecoration: 'none', color:'black'}} activeStyle = {{paddingTop: 20, paddingBottom: 21, backgroundColor: '#66ffff'}}><li id="leftHead">Home</li></Router.IndexLink>
 				<Router.Link to="/resume" style={{textDecoration: 'none', color:'black'}} activeStyle = {{paddingTop: 20, paddingBottom: 21, backgroundColor: '#66ffff'}}><li>Resume</li></Router.Link>
 				<Router.Link to="/portfolio" style={{textDecoration: 'none', color:'black'}} activeStyle = {{paddingTop: 20, paddingBottom: 21, backgroundColor: '#66ffff'}}><li>Portfolio</li></Router.Link>

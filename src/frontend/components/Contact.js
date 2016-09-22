@@ -16,22 +16,22 @@ var Contact = React.createClass({
 	},
 	
 	handleSubmit: function() {
-		var request = new XMLHttpRequest();
-		request.open('POST', '/hello');
-		request.setRequestHeader('Content-Type', 'application/json');
-		request.onload = function() {
-			alert('callback!');
-			if (request.status === 200) {
-				alert('successful post: ' + request.responseText);
-			}
-			else {
-				alert('post not successful ' + request.status);
-			}
-		};
-		// send the request and reset state
-		alert('sending info');
-		request.send(JSON.stringify(this.state));
-		this.setState({subject:"", body:""});
+		if (this.state.subject || this.state.body) {
+			var request = new XMLHttpRequest();
+			request.open('POST', '/contact');
+			request.setRequestHeader('Content-Type', 'application/json');
+			request.onload = function() {
+				if (request.status === 200) {
+					console.log('email sent successfully');
+				}
+				else {
+					console.log('post not successful code:' + request.status);
+				}
+			};
+			// send the request and reset state
+			request.send(JSON.stringify(this.state));
+			this.setState({subject:"", body:""});
+		}
 	},
 	
 	render: function() {

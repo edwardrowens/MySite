@@ -1,17 +1,27 @@
-.header  li {
+.headerLinks  li {
 	font-weight: bold;
 	display: inline-block;
 	padding: 20px;
 }
 
-.header  li:hover {
+.headerLinks  li:hover {
 	background-color: #66ffff;
 }
 
 .header {
 	background-color: #4d4dff;
 	border-bottom: solid;
-	margin-top: 0px;
+	margin: 0px;
+	padding:0px;
+	border:solid;
+}
+
+.logo {
+	display: inline;
+	width: 50px;
+	height: 50px;
+	border-radius: 20px;
+	float:left;
 }
 
 .leftHead {
