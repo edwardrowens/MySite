@@ -9,10 +9,22 @@ var Header = React.createClass({
 		<div className="header">
 			<img className = "logo" src='http://localhost:8000/assets/logo.jpg'/>
 			<ul className="headerLinks">
-				<Router.IndexLink to="/home" style={{textDecoration: 'none', color:'black'}} activeStyle = {{paddingTop: 20, paddingBottom: 21, backgroundColor: '#66ffff'}}><li id="leftHead">Home</li></Router.IndexLink>
-				<Router.Link to="/resume" style={{textDecoration: 'none', color:'black'}} activeStyle = {{paddingTop: 20, paddingBottom: 21, backgroundColor: '#66ffff'}}><li>Resume</li></Router.Link>
-				<Router.Link to="/portfolio" style={{textDecoration: 'none', color:'black'}} activeStyle = {{paddingTop: 20, paddingBottom: 21, backgroundColor: '#66ffff'}}><li>Portfolio</li></Router.Link>
-				<Router.Link to="/contact" style={{textDecoration: 'none', color:'black'}} activeStyle = {{paddingTop: 20, paddingBottom: 21, backgroundColor: '#66ffff'}}><li id="rightHead">Contact</li></Router.Link>
+				<Router.IndexLink to="/home" style={{textDecoration: 'none', color:'black'}}>
+					<li id="leftHead">Home</li>
+				</Router.IndexLink>
+				<div className="headerDivider"></div>
+				<Router.Link to="/resume" style={{textDecoration: 'none', color:'black'}}>
+					<li>Resume</li>
+				</Router.Link>
+				<div className="headerDivider"></div>
+				<Router.Link to="/portfolio" style={{textDecoration: 'none', color:'black'}}>
+					<li>Portfolio</li>
+				</Router.Link>
+				<div className="headerDivider"></div>
+				<Router.Link to="/contact" style={{textDecoration: 'none', color:'black'}}>
+					<li id="rightHead">Contact</li>
+				</Router.Link>
+				<div className="headerDivider"></div>
 			</ul>
 		</div>
 	);

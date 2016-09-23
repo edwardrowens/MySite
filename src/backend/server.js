@@ -3,13 +3,15 @@ var nodeMailer = require('nodeMailer');
 var express = require("express");
 var bodyParser = require("body-parser");
 var app = express();
+var favicon = require('serve-favicon');
 
-app.use(express.static(path.join(__dirname, '../../lib')));
+app.use(express.static(path.join(__dirname, '..')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(favicon(path.join(__dirname, '..', 'assets', 'logo.ico')));
 
 app.get('/', function(req, res) {
-	res.sendFile(path.join(__dirname,'../../index.html'));
+	res.sendFile(path.join(__dirname,'..', '..', 'index.html'));
 });
 
 app.post('/contact', function(req, res) {
