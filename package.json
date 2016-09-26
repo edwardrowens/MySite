@@ -1,17 +1,22 @@
 {
   "name": "my-project",
+  
   "version": "1.0.0",
+  
   "babel": {
     "plugins": [
       "transform-react-jsx"
     ]
   },
+  
   "scripts": {
     "start": "babel src -d lib && browserify ./lib/frontend/app.js -o ./lib/app-compiled.js && node ./lib/backend/server.js"
   },
+
   "devDependencies": {
     "babel-cli": "^6.0.0"
   },
+  
   "dependencies": {
     "babel-plugin-transform-react-jsx": "^6.8.0",
     "body-parser": "^1.15.2",

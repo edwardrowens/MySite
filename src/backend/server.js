@@ -8,7 +8,7 @@ var favicon = require('serve-favicon');
 app.use(express.static(path.join(__dirname, '..')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(favicon(path.join(__dirname, '..', 'assets', 'logo.ico')));
+app.use(favicon(path.join(__dirname, '..', 'assets', 'favicon.png')));
 
 app.get('/', function(req, res) {
 	res.sendFile(path.join(__dirname,'..', '..', 'index.html'));

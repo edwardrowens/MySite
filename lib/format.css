@@ -77,12 +77,10 @@ textarea {
 
 .footerText {
 	font-size:.9em;
-	color: #ffffff;
 }
 
 .footer {
 	text-align:center;
-	background-color: #000000;
 	position:fixed;
 	margin: 0px;
 	padding: 0px;

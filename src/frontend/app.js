@@ -9,6 +9,10 @@ var Header = require('./components/Header');
 var Contact = require('./components/Contact');
 var Footer = require('./components/Footer');
 
+let bHistory = Router.BrowserHistory({
+	queryKey: false
+});
+
 var Application = React.createClass({
 	render: function() {
 		return (
@@ -24,7 +28,7 @@ var Application = React.createClass({
 });
 
 ReactDOM.render(
-<Router.Router>
+<Router.Router history={bHistory}>
 	<Router.Route path="/" component = {Application}>
 		<Router.Route path="home" component = {Home} />
 		<Router.Route path="resume" component = {Resume} />
