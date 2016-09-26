@@ -9,16 +9,12 @@ var Header = require('./components/Header');
 var Contact = require('./components/Contact');
 var Footer = require('./components/Footer');
 
-let bHistory = Router.BrowserHistory({
-	queryKey: false
-});
-
 var Application = React.createClass({
 	render: function() {
 		return (
 			<div>
 				<Header/>
-				<div className="content">
+				<div id="content">
 					{this.props.children}
 				</div>
 				<Footer/>
@@ -28,9 +24,10 @@ var Application = React.createClass({
 });
 
 ReactDOM.render(
-<Router.Router history={bHistory}>
+<Router.Router history={Router.browserHistory}>
 	<Router.Route path="/" component = {Application}>
-		<Router.Route path="home" component = {Home} />
+		<Router.IndexRoute path="home" component = {Home} />
+		<Router.Route path="home" component = {Home}/>
 		<Router.Route path="resume" component = {Resume} />
 		<Router.Route path="portfolio" component = {Portfolio} />
 		<Router.Route path="contact" component = {Contact} />
