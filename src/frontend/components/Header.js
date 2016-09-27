@@ -3,11 +3,10 @@ var ReactDOM = require('react-dom');
 var Router = require('react-router');
 var Home = require('./Home');
 
-var Header = React.createClass({
-	render : function() {
+function Header(props) {
 	return (
 		<div id="header">
-			<img className = "logo" src='http://localhost:8000/assets/logo.jpg'/>
+			<img className = "logo" src='http://localhost:8000/resources/assets/logo.jpg'/>
 			<ul className="headerLinks">
 				<Router.IndexLink to="/home" style={{textDecoration: 'none', color:'black'}}>
 					<li id="leftHead">Home</li>
@@ -28,7 +27,6 @@ var Header = React.createClass({
 			</ul>
 		</div>
 	);
-	}
-});
+};
 
 module.exports = Header;

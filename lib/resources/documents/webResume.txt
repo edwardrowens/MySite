@@ -1,0 +1,53 @@
+<h1 style="text-align: center;" markdown="1"> EDWARD R. OWENS </h1>
+
+### EDUCATION
+**University of California, Los Angeles June 2014**
+* Bachelor of Science, Cognitive Science, Specialization in Computing
+
+### Relevant Coursework 
+* Principles of Java Language with Applications
+* Intermediate C++
+* Machine Learning
+* Signal Detection Theory
+* Psychological Statistics
+* Perception, Learning and Learning Technology
+
+### TECHNICAL SKILLS
+_General_ 
+* Professional experience in software testing (integration, unit, and user) and development (test driven) in Java.
+* Javascript (React) and NodeJS (via Express) for web app development.
+* Moderate experience in Linux scripting (C-shell, and Bash), MATLAB, and R
+* Writing and executing SQL queries
+* Atlassian software development tools
+* Subversion and Git version control
+
+_Java_ 
+* Utilizing Java via Eclipse to write maintainable, scalable, and testable code
+* Testing frameworks and concepts such as Mockito, JUnit, Mocks, and Captors
+* Knowledge of industry-standard Java libraries such as Mockito, Google Guava, and multiple Apache libraries
+* Familiar with web service development and SOAP experience
+
+_C++_
+* Implemented a socket-level, asynchronous, single server to multiple client TCP network using Boost’s Asio library
+* Muli-threaded applications using SDL’s library as well as Boost’s
+* Knowledge of advanced programming techniques such as caching, smart pointers, and function binding
+
+### PROFESSIONAL EXPERIENCE
+**CHP Consulting**                                                                                                                                       
+_Technical Consultant from September 2015 to Present_
+* Developed, maintained, and tested a large scale, OS agnostic, and efficient web app in the asset finance industry used by multiple clients internationally to service portfolios ranging from one to millions of contracts.
+* Worked in teams of developers making use of Agile software development techniques as well as test driven development in Java.
+* Made use of advanced programming and software development concepts such as dependency injection via Google Guice to provide high quality, maintainable, and testable code.
+* Utilized Atlassian tools  and Subversion version control to oversee commits and ensure the quality of the company’s product
+
+**UC Davis MIND Institute, Solomon Laboratory**                                                                                   
+_Junior Specialist from August 2014 to July 2015_
+* Utilized applied mathematical techniques (i.e. graph theory) to investigate functional connectivity between regions of interest in the brain
+* Conducted analyses using correlations, linear regressions, Chi-Squares, ANOVA’s, t-tests, and general linear modeling in SPSS, R and custom written scripts to investigate the relationship between Autism Spectrum Disorder and transitive inference
+* Wrote multiple scripts and pipelines in various Linux shells, MATLAB, R, and C++ to investigate statistical relationships between variables of interest and general usage.
+
+**UCLA, Rissman Memory Laboratory**                                                                                               
+_Research Assistant from August 2013 to August 2014_
+* Collected MRI data, performed quality assurance, preprocessing, and analysis
+* Utilized various forms of analysis and imaging software such as SPM, FreeSurfer, MRICron, and Caret on resting state as well as task-based fMRI data
+* Programmed in many different languages such as Bash and MATLAB to conduct between group analyses and inverse normalize subject’s to their native space for manual tracing

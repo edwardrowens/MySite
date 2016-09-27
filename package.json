@@ -29,6 +29,7 @@
     "superagent": "^2.2.0",
 	"nodemailer": "*",
 	"serve-favicon":"*",
-	"react-marked":"*"
+	"react-marked":"*",
+	"markdown-pdf":"*"
   }
 }

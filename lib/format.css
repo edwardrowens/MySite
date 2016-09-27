@@ -1,7 +1,18 @@
 html {
 	background-color:#f2f2f2;
-	font-family: "Cabin", Serif;
 }
+
+body {
+	font-family: Cabin, Ubuntu, Sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+	color: #595959;
+}
+
+p {
+	color: #333333;
+} 
 
 .headerLinks  li {
 	font-weight: bold;
@@ -70,7 +81,7 @@ textarea {
 	margin-bottom:5px;
 }
 
-.submitEmailButton {
+.standardButton {
 	border-radius: 5px;
 	background-color: #000000;
 	font-size: 1em;
@@ -87,5 +98,4 @@ textarea {
 
 #footer {
 	text-align:center;
-	/*border-top:solid;*/
 }

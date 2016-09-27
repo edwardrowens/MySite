@@ -1,6 +1,5 @@
 var React = require('react');
 var ContactForm = require('./ContactForm');
-var asdjhhjh
 
 var Contact = React.createClass({
 	getInitialState: function() {
