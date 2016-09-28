@@ -1,2 +1,2 @@
-_*hi there*_
-hi again
+# Eddie's site
+Hi there. This is my site. Check out my gfs LinkedIn [here](https://www.linkedin.com/in/cynthiakossan)

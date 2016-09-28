@@ -5,9 +5,11 @@ function ResumePresentation(props) {
 	return (
 		<div>
 			<div dangerouslySetInnerHTML={{__html:marked(props.content)}}></div>
-			<button id="downloadButton" className="standardButton" onClick={props.handleDownloadClick}>
-				Download
-			</button>
+			<form method="get" action="/downloads/resume">
+				<button id="downloadButton" className="standardButton" type="submit">
+					Download
+				</button>
+			</form>
 		</div>
 	);
 };

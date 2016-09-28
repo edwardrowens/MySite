@@ -1,10 +1,10 @@
-<h1 style="text-align: center;" markdown="1"> EDWARD R. OWENS </h1>
+﻿<h1 style="text-align: center;" markdown="1"> EDWARD R. OWENS </h1>
 
-## EDUCATION
+### EDUCATION
 **University of California, Los Angeles June 2014**
 * Bachelor of Science, Cognitive Science, Specialization in Computing
 
-## Relevant Coursework 
+### Relevant Coursework 
 * Principles of Java Language with Applications
 * Intermediate C++
 * Machine Learning
@@ -12,7 +12,7 @@
 * Psychological Statistics
 * Perception, Learning and Learning Technology
 
-## TECHNICAL SKILLS
+### TECHNICAL SKILLS
 _General_ 
 * Professional experience in software testing (integration, unit, and user) and development (test driven) in Java.
 * Javascript (React) and NodeJS (via Express) for web app development.
@@ -32,7 +32,7 @@ _C++_
 * Muli-threaded applications using SDL’s library as well as Boost’s
 * Knowledge of advanced programming techniques such as caching, smart pointers, and function binding
 
-## PROFESSIONAL EXPERIENCE
+### PROFESSIONAL EXPERIENCE
 **CHP Consulting**                                                                                                                                       
 _Technical Consultant from September 2015 to Present_
 * Developed, maintained, and tested a large scale, OS agnostic, and efficient web app in the asset finance industry used by multiple clients internationally to service portfolios ranging from one to millions of contracts.

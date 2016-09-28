@@ -19,22 +19,8 @@ var Resume = React.createClass({
 		}
 	},
 	
-	handleDownloadClick: function() {
-		var request = new XMLHttpRequest();
-		request.open('GET','downloads/resume');
-		request.onload = function() {
-			if (request.status === 200) {
-				console.log('email sent successfully');
-			} else {
-				alert('Request unsuccessful: ' + request.status + ' from ' + request.responseURL);
-			}
-		};
-		request.send();
-	},
-	
 	render: function() {
-		return <ResumePresentation handleDownloadClick={this.handleDownloadClick}
-								   content={this.state.content}/>;
+		return <ResumePresentation content={this.state.content}/>;
 	}
 });
 

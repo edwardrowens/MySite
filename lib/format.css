@@ -83,13 +83,18 @@ textarea {
 
 .standardButton {
 	border-radius: 5px;
-	background-color: #000000;
+	background-color: #ffffff;
 	font-size: 1em;
-	color: #ffffff;
+	color: #000000;
 	text-align: "center";
 	height: 45px;
 	width: 100px;
 	margin-top:5px;
+	border: 3px solid #cc99ff;
+}
+
+.standardButton:hover {
+	background-color: #cc99ff;
 }
 
 #downloadButton {
