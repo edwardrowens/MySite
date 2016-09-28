@@ -10,7 +10,7 @@ function ResumePresentation(props) {
 					Download
 				</button>
 			</form>
-		</div>
+		</div> 
 	);
 };
 
