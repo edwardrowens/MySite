@@ -1,11 +1,12 @@
 var React = require('react');
+var marked = require('marked');
 
 function ResumePresentation(props) {
 	return (
 		<div>
 			<div dangerouslySetInnerHTML={{__html:marked(props.content)}}></div>
-			<button className="standardButton" onClick={props.handleDownloadClick}>
-				Submit
+			<button id="downloadButton" className="standardButton" onClick={props.handleDownloadClick}>
+				Download
 			</button>
 		</div>
 	);

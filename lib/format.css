@@ -92,6 +92,11 @@ textarea {
 	margin-top:5px;
 }
 
+#downloadButton {
+	position:relative;
+	left:50%;
+}
+
 .footerText {
 	font-size:.9em;
 }
