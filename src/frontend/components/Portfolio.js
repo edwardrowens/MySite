@@ -1,7 +1,13 @@
 var React = require('react');
 
-function Portfolio(props) {
-	return <h1>This is my portfolio</h1>;
-};
+var Portfolio = React.createClass({
+	componentDidMount: function() {
+		document.title = "Portfolio";
+	},
+	
+	render: function() {
+		return <h1>This is my portfolio</h1>;
+	}
+});
 
 module.exports = Portfolio;

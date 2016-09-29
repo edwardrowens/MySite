@@ -20,9 +20,6 @@ p {
 	padding:22px 15px 26px 15px;
 }
 
-.headerLinks  li:hover {
-}
-
 #header {
 	position:relative;
 	background-color: #ffffff;
@@ -115,6 +112,13 @@ textarea {
 	border: 5px solid #cc99ff;
 	text-align:center;
 	display:inline-block;
+	transition: all .1s linear;
+}
+
+.dateInformationYear:hover{
+	width:75px;
+	height:75px;
+	font-size: 115%;
 }
 
 .dateInformationHead {
@@ -141,40 +145,51 @@ textarea {
 	padding: 10px, 15px, 15px, 15px;
 	width:100%;
 	word-wrap: break-word;
+	font-size:.8em;
 }
 
 .resumeBlock {
 	position:relative;
 	width:450px;
-	display:inline-block;
 	margin:10px;
 }
 
-.resumeBlock h1 {
+.resumeBlock h2 {
 	text-align:center;
-	display:inline-block;
 }
 
 #resume {
-	column-count:2;
+	position:relative;
+}
+
+#resume > * {
+	display:inline-block;
+	margin-right:20px;
+	vertical-align:top;
+}
+
+#skillBlocks > * {
+	width:285px;
 }
 
 .skillProgressBarContainer {
-	width: 400px;
-	margin-top:8px;
+	width: 285px;
+	margin-top:7px;
 }
 
 .skillProgressBar {
-	height: 35px;
+	height: 23px;
 	width: 100%;
-	border:5px solid #595959;
+	border-radius:10px;
+	border:3px solid #595959;
 	position:relative;
 }
 
 .masteryLevel {
 	display:inline-block;
 	width:20%;
-	line-height:35px;
+	line-height:23px;
+	font-size:.6em;
 }
 
 .masteryLevelList {

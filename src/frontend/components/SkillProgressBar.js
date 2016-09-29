@@ -1,27 +1,16 @@
 var React = require('react');
-
-function decideColors(color, fill) {
-	var colors = [];
-	
-	for (var i=0; i < fill; ++i) {
-			colors.push(color);
-	}
-	for (;i<5;++i) {
-			colors.push('#ffffff');
-	}
-	return colors;
-}
+var SkillProgressBarService = require('../services/SkillProgressBarService');
 
 var SkillProgressBar = React.createClass({
 	render: function() {
-		var colors = decideColors(this.props.color, this.props.fill);
+		var colors = SkillProgressBarService.decideColors(this.props.color, this.props.fill);
 
 		return (
 			<div className="skillProgressBarContainer">
-				<h3 className="skillProgressBarHeader">{this.props.header}</h3>
+			<h5 className="skillProgressBarHeader">{this.props.header}</h5>
 				<div className="skillProgressBar">
 					<ul className="masteryLevelList">
-						<li className="masteryLevel" style={{backgroundColor:colors[0]}}>
+						<li className="masteryLevel" style={{backgroundColor:colors[0], borderTopLeftRadius:6, borderBottomLeftRadius:6}}>
 							Beginner
 						</li>
 						<div className="masterLevelDivider"></div>

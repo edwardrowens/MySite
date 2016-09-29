@@ -19,6 +19,10 @@ var Home = React.createClass({
 		}
 	},
 	
+	componentDidMount: function() {
+		document.title = "Home";
+	},
+	
 	render: function() {
 		return <div dangerouslySetInnerHTML={{__html:marked(this.state.content)}}></div>;
 	}

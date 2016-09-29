@@ -37,6 +37,10 @@ var Contact = React.createClass({
 		}
 	},
 	
+	componentDidMount: function() {
+		document.title = "Contact";
+	},
+	
 	render: function() {
 		return (
 			<ContactForm handleSubmit={this.handleSubmit} 
