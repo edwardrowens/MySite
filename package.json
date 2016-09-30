@@ -1,43 +1,39 @@
 {
   "name": "my-project",
-  
   "version": "1.0.0",
-  
   "babel": {
     "plugins": [
       "transform-react-jsx"
     ]
   },
-  
   "scripts": {
     "start": "babel src -d lib && browserify ./lib/frontend/app.js -o ./lib/app-compiled.js && node ./lib/backend/server.js"
   },
-  
-  "keywords": ["example", "heroku"],
-  
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "engines": {
     "node": "4.5.0",
-	"npm": "2.15.9"
+    "npm": "2.15.9"
   },
-
   "main": "server.js",
-  
   "devDependencies": {
     "babel-cli": "^6.0.0"
   },
-  
   "dependencies": {
+    "babel": "^6.5.2",
     "babel-plugin-transform-react-jsx": "^6.8.0",
     "body-parser": "^1.15.2",
     "browserify": "^13.1.0",
     "express": "^4.14.0",
+    "marked": "*",
+    "nodemailer": "*",
     "radium": "^0.18.1",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
     "react-router": "^2.7.0",
-    "superagent": "^2.2.0",
-	"nodemailer": "*",
-	"serve-favicon":"*",
-	"marked":"*"
+    "serve-favicon": "*",
+    "superagent": "^2.2.0"
   }
 }
