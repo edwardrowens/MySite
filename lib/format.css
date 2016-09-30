@@ -33,15 +33,20 @@ a:hover {
 .headerLinks  li {
 	font-weight: bold;
 	display: inline-block;
-	padding:22px 15px 26px 15px;
+	padding:20px 20px 26px 20px;
+	vertical-align:middle;
 }
 
 #header {
 	position:relative;
 	background-color: #ffffff;
-	height:70px;
-	padding-top:2px;
-	line-height:150%;
+	padding-top:5px;
+	overflow:auto;
+	padding-bottom:0px;
+}
+
+#header > * {
+	display:inline-block;
 }
 
 .logo {
@@ -53,8 +58,11 @@ a:hover {
 }
 
 .headerLinks {
-	margin-left:50px;
+	margin-left:10px;
 	margin-top:0px;
+	padding-left:0px;
+	padding-bottom:0px;
+	margin-bottom:0px;
 }
 
 .headerDivider {
@@ -62,6 +70,17 @@ a:hover {
 	top:10%;
 	bottom:10%;
 	border:1px solid #cc99ff;
+	display:inline-block;
+}
+
+#socialMedia {
+	float: right;
+	margin-right:20px;
+}
+
+#socialMedia img {
+	margin-top:10px;
+	margin-right:10px;
 	display:inline-block;
 }
 

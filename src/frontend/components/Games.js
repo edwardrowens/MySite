@@ -8,9 +8,9 @@ var Games = React.createClass({
 	render: function() {
 		return (
 		<div className="gamesContainer">
-			<img src="http://localhost:8000/resources/assets/rightJimmy.png"/>
+			<a href="http://opengameart.org/users/1001com" target="_blank"><img src="http://localhost:8000/resources/assets/rightJimmy.png"/></a>
 			<h1>Jimmy Jump coming soon!</h1>
-			<img src="http://localhost:8000/resources/assets/leftJimmy.png"/>
+			<a href="http://opengameart.org/users/1001com" target="_blank"><img src="http://localhost:8000/resources/assets/leftJimmy.png"/></a>
 		</div>
 		);
 	}

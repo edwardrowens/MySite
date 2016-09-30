@@ -6,10 +6,10 @@ var Home = require('./Home');
 function Header(props) {
 	return (
 		<div id="header">
-			<img className = "logo" src='http://localhost:8000/resources/assets/logo.jpg'/>
+			<img className = "logo" src='http://localhost:8000/resources/assets/logo.jpg' title='Created by Will Kevans'/>
 			<ul className="headerLinks">
 				<Router.IndexLink to="/home" style={{textDecoration: 'none', color:'black'}}>
-					<li id="leftHead">Home</li>
+					<li>Home</li>
 				</Router.IndexLink>
 				<div className="headerDivider"></div>
 				<Router.Link to="/resume" style={{textDecoration: 'none', color:'black'}}>
@@ -21,10 +21,14 @@ function Header(props) {
 				</Router.Link>
 				<div className="headerDivider"></div>
 				<Router.Link to="/contact" style={{textDecoration: 'none', color:'black'}}>
-					<li id="rightHead">Contact</li>
+					<li>Contact</li>
 				</Router.Link>
 				<div className="headerDivider"></div>
 			</ul>
+			<div id="socialMedia">
+				<a href="https://www.linkedin.com/in/edward-owens-9a36aaaa" target="_blank"><img src='http://localhost:8000/resources/assets/LinkedInLogo.png'/></a>
+				<a href="https://github.com/edwardrowens" target="_blank"><img src='http://localhost:8000/resources/assets/GitHubLogo.png'/></a>
+			</div>
 		</div>
 	);
 };

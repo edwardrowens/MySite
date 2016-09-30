@@ -13,6 +13,8 @@
     "start": "babel src -d lib && browserify ./lib/frontend/app.js -o ./lib/app-compiled.js && node ./lib/backend/server.js"
   },
 
+  "main": "server.js",
+  
   "devDependencies": {
     "babel-cli": "^6.0.0"
   },
