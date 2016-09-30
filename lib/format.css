@@ -12,7 +12,23 @@ h1, h2, h3, h4, h5 {
 
 p {
 	color: #333333;
+}
+
+a {
+	text-decoration:none;
 } 
+
+a:link {
+	color:#3399ff;
+}
+
+a:visited {
+	color:#004d99;
+}
+
+a:hover {
+	color:#b3d9ff;
+}
 
 .headerLinks  li {
 	font-weight: bold;
@@ -216,6 +232,10 @@ textarea {
 	top:10%;
 	bottom:10%;
 	border:1px solid #595959;
+	display:inline-block;
+}
+
+.gamesContainer>* {
 	display:inline-block;
 }
 

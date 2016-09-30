@@ -81,19 +81,6 @@ var Resume = React.createClass({
 							<SkillProgressBar header='Express'
 											color='#66a3ff'
 											fill={2}/>
-							<h3>Technical Knowledge</h3>
-							<SkillProgressBar header='Network Programming'
-											color='#4dff4d'
-											fill={3}/>
-							<SkillProgressBar header='Testing'
-											color='#4dff4d'
-											fill={3}/>
-							<SkillProgressBar header='Game Development'
-											color='#4dff4d'
-											fill={3}/>
-							<SkillProgressBar header='Concurrency'
-											color='#4dff4d'
-											fill={2}/>
 						</div>
 					</div>
 				</div>

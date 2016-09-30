@@ -16,8 +16,8 @@ function Header(props) {
 					<li>Resume</li>
 				</Router.Link>
 				<div className="headerDivider"></div>
-				<Router.Link to="/portfolio" style={{textDecoration: 'none', color:'black'}}>
-					<li>Portfolio</li>
+				<Router.Link to="/games" style={{textDecoration: 'none', color:'black'}}>
+					<li>Games</li>
 				</Router.Link>
 				<div className="headerDivider"></div>
 				<Router.Link to="/contact" style={{textDecoration: 'none', color:'black'}}>

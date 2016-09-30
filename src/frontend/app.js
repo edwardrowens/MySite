@@ -4,7 +4,7 @@ var Router = require('react-router');
 
 var Home = require('./components/Home');
 var Resume = require('./components/Resume');
-var Portfolio = require('./components/Portfolio');
+var Games = require('./components/Games');
 var Header = require('./components/Header');
 var Contact = require('./components/Contact');
 var Footer = require('./components/Footer');
@@ -29,7 +29,7 @@ ReactDOM.render(
 		<Router.IndexRoute path="home" component = {Home} />
 		<Router.Route path="home" component = {Home}/>
 		<Router.Route path="resume" component = {Resume} />
-		<Router.Route path="portfolio" component = {Portfolio} />
+		<Router.Route path="games" component = {Games} />
 		<Router.Route path="contact" component = {Contact} />
 	</ Router.Route>
 </ Router.Router>, 

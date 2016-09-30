@@ -12,7 +12,7 @@ var Home = React.createClass({
 		request.send();
 
 		if (request.status === 200) {
-			this.setState({content: request.responseText.replace(/\n/g, "<br />")});
+			this.setState({content: request.responseText});
 		} else {
 			this.setState({content: "The content could not be loaded."});
 			console.log('Request unsuccessful: ' + request.status + ' from ' + request.responseURL);
