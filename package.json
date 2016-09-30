@@ -16,7 +16,8 @@
   "keywords": ["example", "heroku"],
   
   "engines": {
-    "node": "4.5.0"
+    "node": "4.5.0",
+	"npm": "2.15.9"
   },
 
   "main": "server.js",
