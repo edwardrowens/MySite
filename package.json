@@ -12,6 +12,12 @@
   "scripts": {
     "start": "babel src -d lib && browserify ./lib/frontend/app.js -o ./lib/app-compiled.js && node ./lib/backend/server.js"
   },
+  
+  "keywords": ["example", "heroku"],
+  
+  "engines": {
+    "node": "4.5.0"
+  },
 
   "main": "server.js",
   
