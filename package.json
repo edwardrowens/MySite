@@ -17,10 +17,9 @@
     "node": "4.5.0",
     "npm": "2.15.9"
   },
+  
   "main": "server.js",
-  "devDependencies": {
-    "babel-cli": "^6.0.0"
-  },
+
   "dependencies": {
     "babel-cli": "^6.16.0",
     "babel-plugin-transform-react-jsx": "^6.8.0",
