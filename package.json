@@ -1,6 +1,7 @@
 {
-  "name": "my-project",
+  "name": "eddieowens",
   "version": "1.0.0",
+  "main": "server.js",
   "babel": {
     "plugins": [
       "transform-react-jsx"
@@ -9,16 +10,14 @@
   "scripts": {
     "start": "babel src -d lib && browserify ./lib/frontend/app.js -o ./lib/app-compiled.js && node ./lib/backend/server.js"
   },
-
   "engines": {
     "node": "4.5.0",
     "npm": "2.15.9"
   },
-  "main": "server.js",
-  
-  "devDependencies": {"babel-cli": "^6.16.0"},
-  
+
   "dependencies": {
+	"babel-cli": "^6.16.0"
+    "babel": "^6.5.2",
     "babel-plugin-transform-react-jsx": "^6.8.0",
     "body-parser": "^1.15.2",
     "browserify": "^13.1.0",
