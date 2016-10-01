@@ -6,7 +6,7 @@ var Home = require('./Home');
 function Header(props) {
 	return (
 		<div id="header">
-			<img className = "logo" src='http://localhost:8000/resources/assets/logo.jpg' title='Created by Will Kevans'/>
+			<img className = "logo" src='resources/assets/logo.jpg' title='Created by Will Kevans'/>
 			<ul className="headerLinks">
 				<Router.IndexLink to="/home" style={{textDecoration: 'none', color:'black'}}>
 					<li>Home</li>
@@ -26,8 +26,8 @@ function Header(props) {
 				<div className="headerDivider"></div>
 			</ul>
 			<div id="socialMedia">
-				<a href="https://www.linkedin.com/in/edward-owens-9a36aaaa" target="_blank"><img src='http://localhost:8000/resources/assets/LinkedInLogo.png'/></a>
-				<a href="https://github.com/edwardrowens" target="_blank"><img src='http://localhost:8000/resources/assets/GitHubLogo.png'/></a>
+				<a href="https://www.linkedin.com/in/edward-owens-9a36aaaa" target="_blank"><img src='resources/assets/LinkedInLogo.png'/></a>
+				<a href="https://github.com/edwardrowens" target="_blank"><img src='resources/assets/GitHubLogo.png'/></a>
 			</div>
 		</div>
 	);
