@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node ./lib/backend/server.js",
-    "preinstall": "babel src -d lib && browserify ./lib/frontend/app.js -o ./lib/app-compiled.js"
+    "postinstall": "babel src -d lib && browserify ./lib/frontend/app.js -o ./lib/app-compiled.js"
   },
   "engines": {
     "node": "4.5.0",
