@@ -1,4 +1,4 @@
-var React = require('React');
+var React = require('react');
 var marked = require('marked');
 
 var Home = React.createClass({
