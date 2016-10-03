@@ -1,25 +1,19 @@
 {
-  "name": "my-project",
+  "name": "eddieowens",
   "version": "1.0.0",
+  "main": "server.js",
   "babel": {
     "plugins": [
       "transform-react-jsx"
     ]
   },
   "scripts": {
-    "start": "babel src -d lib && browserify ./lib/frontend/app.js -o ./lib/app-compiled.js && node ./lib/backend/server.js"
+    "start": "node ./lib/backend/server.js",
+    "postinstall": "babel src -d lib && browserify ./lib/frontend/app.js -o ./lib/app-compiled.js"
   },
-  "keywords": [
-    "example",
-    "heroku"
-  ],
   "engines": {
     "node": "4.5.0",
     "npm": "2.15.9"
-  },
-  "main": "server.js",
-  "devDependencies": {
-    "babel-cli": "^6.0.0"
   },
   "dependencies": {
     "babel-cli": "^6.16.0",

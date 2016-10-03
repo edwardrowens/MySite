@@ -1,10 +1,13 @@
 var path = require('path');
 var fs = require('fs');
-var nodeMailer = require('nodeMailer');
+var nodeMailer = require('nodemailer');
 var express = require("express");
 var bodyParser = require("body-parser");
 var app = express();
 var favicon = require('serve-favicon');
+
+//Heroku stuff
+var PORT = process.env.PORT || 8000;
 
 app.use(express.static(path.join(__dirname, '..')));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -58,4 +61,4 @@ app.post('/contact', function(req, res) {
 });
 
 console.log("Server started");
-var server = app.listen(8000);
+var server = app.listen(process.env.PORT || 8000);
