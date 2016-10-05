@@ -48,4 +48,5 @@ Temporary Items
 
 node_modules/
 *.log
-lib/frontend/components/*.js
+lib/**/*.js
+lib/*.js

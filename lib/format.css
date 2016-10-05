@@ -45,6 +45,10 @@ a:hover {
 	padding-bottom:0px;
 }
 
+#jimmyJumpGame {
+	border:solid;
+}
+
 #header > * {
 	display:inline-block;
 }
