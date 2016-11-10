@@ -2,7 +2,7 @@ var React = require('react');
 
 function ContactForm(props) {
 	return (
-			<form className="emailForm" onSubmit={props.handleSubmit}>
+			<form className="emailForm">
 				<h1>Email me</h1>
 				<textarea 
 					id="emailName"
@@ -27,7 +27,7 @@ function ContactForm(props) {
 					onChange={props.handleEmailBodyChange}
 					style={{float:'right'}}>
 				</textarea>
-				<button type="submit" style={{float: 'right'}} className="standardButton">
+				<button type="button" onClick={props.handleSubmit} style={{float: 'right'}} className="standardButton">
 					Submit
 				</button>
 			</form>

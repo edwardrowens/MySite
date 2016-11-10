@@ -19,7 +19,7 @@ var Contact = React.createClass({
 	},
 	
 	handleSubmit: function() {
-		if (this.state.subject || this.state.body) {
+		if (this.state.name && this.state.body) {
 			var request = new XMLHttpRequest();
 			request.open('POST', '/contact');
 			request.setRequestHeader('Content-Type', 'application/json');
@@ -34,7 +34,9 @@ var Contact = React.createClass({
 			// send the request and reset state
 			request.send(JSON.stringify(this.state));
 			this.setState({subject:"", name:"", body:""});
-		}
+		} else {
+            alert('Please provide a name and body of the email');
+        }
 	},
 	
 	componentDidMount: function() {
