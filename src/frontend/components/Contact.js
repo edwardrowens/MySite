@@ -26,8 +26,10 @@ var Contact = React.createClass({
 			request.onload = function() {
 				if (request.status === 200) {
 					console.log('email sent successfully');
+					alert('Email sent!')
 				}
 				else {
+					alert('Email is currently down. Please try again later.')
 					console.log('post not successful code:' + request.status);
 				}
 			};
