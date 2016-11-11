@@ -34,7 +34,7 @@ app.get('*', function(req, res) {
 });
 
 app.post('/contact', function(req, res) {
-	var transporter = nodeMailer.createTransport({
+	var transporter = nodeMailer.createTransport("SMTP", {
 		service: 'Gmail',
 		XOAuth2: {
 			user: 'eddiereactpractice@gmail.com',
