@@ -62,7 +62,6 @@ app.post('/contact', function(req, res) {
 			console.log('message sent');
 			res.json({status: 'failed ' + info.response});
 		}
-		smtpTransport.close();
 	});
 });
 
