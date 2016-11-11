@@ -48,6 +48,10 @@ app.post('/contact', function(req, res) {
 	var mailOptions = {
 		from: req.body.name + ' <eddiereactpractice@gmail.com>',
 		to: 'edwardrowens@gmail.com',
+		envelope: {
+			from: req.body.name + ' <eddiereactpractice@gmail.com>',
+			to: 'edwardrowens@gmail.com Eddie <edwardrowens@gmail.com>'
+		},
 		subject: req.body.subject,
 		text: req.body.body
 	};
