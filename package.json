@@ -10,12 +10,10 @@
   "scripts": {
     "start": "babel src -d lib && browserify ./lib/frontend/app.js | uglifyjs > ./lib/app-compiled.js && node ./lib/backend/server.js"
   },
-  
   "engines": {
     "node": "4.5.0",
     "npm": "2.15.9"
   },
-  
   "dependencies": {
     "babel-cli": "^6.16.0",
     "babel-plugin-transform-react-jsx": "^6.8.0",
@@ -25,6 +23,7 @@
     "express": "^4.14.0",
     "marked": "*",
     "nodemailer": "*",
+    "nodemailer-smtp-transport": "^2.7.2",
     "radium": "^0.18.1",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",

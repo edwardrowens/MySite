@@ -5,6 +5,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var app = express();
 var favicon = require('serve-favicon');
+var smtpTransport = require('nodemailer-smtp-transport');
 
 //Heroku stuff
 var PORT = process.env.PORT || 8000;
@@ -34,7 +35,7 @@ app.get('*', function(req, res) {
 });
 
 app.post('/contact', function(req, res) {
-	var transporter = nodeMailer.createTransport("SMTP", {
+	var transporter = nodeMailer.createTransport(smtpTransport({
 		service: 'Gmail',
 		XOAuth2: {
 			user: 'eddiereactpractice@gmail.com',
@@ -42,7 +43,7 @@ app.post('/contact', function(req, res) {
 			clientSecret: 'sDu5tQRL-WAsJi0VfKP9m1DI',
 			refreshToken: '1/D5DNCQ_Hjloo87a5GNM3SDvI3PjBmHbjXU4HTCR9B_Y'
 		}
-	});
+	}));
 	
 	var mailOptions = {
 		from: req.body.name + ' <eddiereactpractice@gmail.com>',
