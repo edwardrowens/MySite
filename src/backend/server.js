@@ -40,16 +40,16 @@ app.post('/contact', function(req, res) {
 		service: 'Gmail',
 		auth: {
 			XOAuth2: xoauth2.createXOAuth2Generator({
-				user: 'eddiereactpractice@gmail.com',
-				clientId: '1022362140276-g5tq39nuv24etnv8eakgt8jj7c7177c1.apps.googleusercontent.com',
-				clientSecret: 'ZR-rRsP7wWj89-JiWk3Gqo0-',
-				refreshToken: '1/MS1es44qctTzWcgBj-UE0yfzXkMFavMIj1fxV6JO9SM'
+				user: 'eddiemailsender@gmail.com',
+				clientId: '952397623259-9m69nvhobh1v8r1ahvc1kt3v92o1p6n0.apps.googleusercontent.com',
+				clientSecret: 'L5BzU5xXaNjF3L04dKF_RbBI',
+				refreshToken: '1/_35BMLaU17iBsyhqOjkkoFdLeEGLkwIwzxFyYEaJRLU'
 			})
 		}
 	}));
 	
 	var mailOptions = {
-		from: req.body.name + ' <eddiereactpractice@gmail.com>',
+		from: req.body.name + ' <eddiemailsender@gmail.com>',
 		to: 'edwardrowens@gmail.com',
 		subject: req.body.subject,
 		text: req.body.body
