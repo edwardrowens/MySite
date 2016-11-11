@@ -20,6 +20,7 @@
     "body-parser": "^1.15.2",
     "browserify": "^13.1.0",
     "craftyjs": "^0.7.1",
+    "crypto": "0.0.3",
     "express": "^4.14.0",
     "marked": "*",
     "nodemailer": "*",
@@ -30,7 +31,6 @@
     "react-router": "^2.7.0",
     "serve-favicon": "*",
     "superagent": "^2.2.0",
-    "uglify-js": "^2.7.3",
-    "xoauth2": "^1.2.0"
+    "uglify-js": "^2.7.3"
   }
 }

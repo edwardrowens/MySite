@@ -6,10 +6,12 @@ var bodyParser = require("body-parser");
 var app = express();
 var favicon = require('serve-favicon');
 var smtpTransport = require('nodemailer-smtp-transport');
-var xoauth2 = require('xoauth2');
+var crypt = require('./crypt');
 
 //Heroku stuff
 var PORT = process.env.PORT || 8000;
+
+var encryptedPassword = '1670bbc731f58b3e';
 
 app.use(express.static(path.join(__dirname, '..')));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -39,13 +41,8 @@ app.post('/contact', function(req, res) {
 	var transporter = nodeMailer.createTransport(smtpTransport({
 		service: 'Gmail',
 		auth: {
-			XOAuth2: xoauth2.createXOAuth2Generator({
-				user: 'eddiemailsender@gmail.com',
-				clientId: '952397623259-9m69nvhobh1v8r1ahvc1kt3v92o1p6n0.apps.googleusercontent.com',
-				clientSecret: 'L5BzU5xXaNjF3L04dKF_RbBI',
-				refreshToken: '1/_35BMLaU17iBsyhqOjkkoFdLeEGLkwIwzxFyYEaJRLU',
-				accessToken: 'ya29.Ci-TA_8u0uaAjEySkLTbzmOKbpIkBSO6TVxnjLaszEfrUmB6R_ZYL9-Edrql6f0rhw'
-			})
+			user:'eddiemailsender@gmail.com',
+			pass: crypt.decrypt(encryptedPassword)
 		}
 	}));
 	
