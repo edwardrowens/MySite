@@ -6,6 +6,7 @@ var bodyParser = require("body-parser");
 var app = express();
 var favicon = require('serve-favicon');
 var smtpTransport = require('nodemailer-smtp-transport');
+var xoauth2 = require('xoauth2');
 
 //Heroku stuff
 var PORT = process.env.PORT || 8000;
@@ -38,12 +39,12 @@ app.post('/contact', function(req, res) {
 	var transporter = nodeMailer.createTransport(smtpTransport({
 		service: 'Gmail',
 		auth: {
-			XOAuth2: {
+			XOAuth2: xoauth2.createXOAuth2Generator({
 				user: 'eddiereactpractice@gmail.com',
 				clientId: '1022362140276-g5tq39nuv24etnv8eakgt8jj7c7177c1.apps.googleusercontent.com',
 				clientSecret: 'ZR-rRsP7wWj89-JiWk3Gqo0-',
 				refreshToken: '1/MS1es44qctTzWcgBj-UE0yfzXkMFavMIj1fxV6JO9SM'
-			}
+			})
 		}
 	}));
 	

@@ -30,6 +30,7 @@
     "react-router": "^2.7.0",
     "serve-favicon": "*",
     "superagent": "^2.2.0",
-    "uglify-js": "^2.7.3"
+    "uglify-js": "^2.7.3",
+    "xoauth2": "^1.2.0"
   }
 }
