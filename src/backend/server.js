@@ -37,21 +37,19 @@ app.get('*', function(req, res) {
 app.post('/contact', function(req, res) {
 	var transporter = nodeMailer.createTransport(smtpTransport({
 		service: 'Gmail',
-		XOAuth2: {
-			user: 'eddiereactpractice@gmail.com',
-			clientId: '182602479635-g61dmkbb1g9ihto7f0mfk5nkkf3qqdn8.apps.googleusercontent.com',
-			clientSecret: 'sDu5tQRL-WAsJi0VfKP9m1DI',
-			refreshToken: '1/D5DNCQ_Hjloo87a5GNM3SDvI3PjBmHbjXU4HTCR9B_Y'
+		auth: {
+			XOAuth2: {
+				user: 'eddiereactpractice@gmail.com',
+				clientId: '182602479635-g61dmkbb1g9ihto7f0mfk5nkkf3qqdn8.apps.googleusercontent.com',
+				clientSecret: 'sDu5tQRL-WAsJi0VfKP9m1DI',
+				refreshToken: '1/D5DNCQ_Hjloo87a5GNM3SDvI3PjBmHbjXU4HTCR9B_Y'
+			}
 		}
 	}));
 	
 	var mailOptions = {
 		from: req.body.name + ' <eddiereactpractice@gmail.com>',
 		to: 'edwardrowens@gmail.com',
-		envelope: {
-			from: req.body.name + ' <eddiereactpractice@gmail.com>',
-			to: 'edwardrowens@gmail.com Eddie <edwardrowens@gmail.com>'
-		},
 		subject: req.body.subject,
 		text: req.body.body
 	};
@@ -64,6 +62,7 @@ app.post('/contact', function(req, res) {
 			console.log('message sent');
 			res.json({status: 'failed ' + info.response});
 		}
+		smtpTransport.close();
 	});
 });
 
