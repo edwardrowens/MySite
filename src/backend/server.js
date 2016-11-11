@@ -40,9 +40,9 @@ app.post('/contact', function(req, res) {
 		auth: {
 			XOAuth2: {
 				user: 'eddiereactpractice@gmail.com',
-				clientId: '182602479635-g61dmkbb1g9ihto7f0mfk5nkkf3qqdn8.apps.googleusercontent.com',
-				clientSecret: 'sDu5tQRL-WAsJi0VfKP9m1DI',
-				refreshToken: '1/D5DNCQ_Hjloo87a5GNM3SDvI3PjBmHbjXU4HTCR9B_Y'
+				clientId: '1022362140276-g5tq39nuv24etnv8eakgt8jj7c7177c1.apps.googleusercontent.com',
+				clientSecret: 'ZR-rRsP7wWj89-JiWk3Gqo0-',
+				refreshToken: '1/MS1es44qctTzWcgBj-UE0yfzXkMFavMIj1fxV6JO9SM'
 			}
 		}
 	}));
