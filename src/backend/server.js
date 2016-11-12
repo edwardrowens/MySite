@@ -41,7 +41,7 @@ app.post('/contact', function(req, res) {
 	var transporter = nodeMailer.createTransport(smtpTransport({
 		service: 'Gmail',
 		auth: {
-			user: emailAddress,
+			user: fromEmailAddress,
 			pass: emailPassword
 		}
 	}));
