@@ -6,14 +6,12 @@ var bodyParser = require("body-parser");
 var app = express();
 var favicon = require('serve-favicon');
 var smtpTransport = require('nodemailer-smtp-transport');
-// var crypt = require('./crypt');
 
-//Heroku stuff
+// grab the configuration
 var PORT = process.env.PORT || 8000;
-
-// var encryptedPassword = '1670bbc731f58b3e';
-// grab the configured password
-var emailPassword = process.env.emailPassword || 'password1';
+var emailPassword = process.env.emailPassword;
+var fromEmailAddress = process.env.fromEmailAddress;
+var toEmailAddress = process.env.toEmailAddress;
 
 app.use(express.static(path.join(__dirname, '..')));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -43,14 +41,14 @@ app.post('/contact', function(req, res) {
 	var transporter = nodeMailer.createTransport(smtpTransport({
 		service: 'Gmail',
 		auth: {
-			user:'eddiemailsender@gmail.com',
+			user: emailAddress,
 			pass: emailPassword
 		}
 	}));
 	
 	var mailOptions = {
-		from: req.body.name + ' <eddiemailsender@gmail.com>',
-		to: 'edwardrowens@gmail.com',
+		from: req.body.name + ' ' + fromEmailAddress,
+		to: toEmailAddress,
 		subject: req.body.subject,
 		text: req.body.body
 	};

@@ -20,7 +20,6 @@
     "body-parser": "^1.15.2",
     "browserify": "^13.1.0",
     "craftyjs": "^0.7.1",
-    "crypto": "0.0.3",
     "express": "^4.14.0",
     "marked": "*",
     "nodemailer": "*",
