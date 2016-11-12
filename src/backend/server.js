@@ -6,12 +6,14 @@ var bodyParser = require("body-parser");
 var app = express();
 var favicon = require('serve-favicon');
 var smtpTransport = require('nodemailer-smtp-transport');
-var crypt = require('./crypt');
+// var crypt = require('./crypt');
 
 //Heroku stuff
 var PORT = process.env.PORT || 8000;
 
-var encryptedPassword = '1670bbc731f58b3e';
+// var encryptedPassword = '1670bbc731f58b3e';
+// grab the configured password
+var emailPassword = process.env.emailPassword || 'password1';
 
 app.use(express.static(path.join(__dirname, '..')));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -42,7 +44,7 @@ app.post('/contact', function(req, res) {
 		service: 'Gmail',
 		auth: {
 			user:'eddiemailsender@gmail.com',
-			pass: crypt.decrypt(encryptedPassword)
+			pass: emailPassword
 		}
 	}));
 	
