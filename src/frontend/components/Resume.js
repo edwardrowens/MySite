@@ -15,6 +15,14 @@ var Resume = React.createClass({
 					<div id="experienceBlocks">
 						<div className="resumeBlock">
 							<h2>Work Experience</h2>
+							<DateInformation yearLink="https://gamblitgaming.com/"
+											 year="2016"
+											 title="Software Engineer"
+											 subHeading="Gamblit Gaming"
+											 body={"Platform engineer working with both Java and C++ on multiple " +
+												   "enhancements including in app purchases for all games which were " +
+												   "ported onto our hardware. Used Spring, Maven, Git, Java.Util, and " +
+												   "many other utility classes to perform my tasks."}/>
 							<DateInformation yearLink="http://www.chpconsulting.com/"
 											 year="2015"
 											 title="Consultant"
