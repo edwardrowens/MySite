@@ -3,6 +3,7 @@ var SkillsContainer = require('./../container/SkillsContainer')
 var WorkExperienceContainer = require('./../container/WorkExperienceContainer')
 var EducationContainer = require('./../container/EducationContainer')
 var AboutMeContainer = require('./../container/AboutMeContainer')
+var ContactContainer = require('../container/ContactContainer')
 
 function Resume(props) {
 	return (
@@ -12,6 +13,7 @@ function Resume(props) {
 				<WorkExperienceContainer />
 				<EducationContainer />
 				<SkillsContainer />
+				<ContactContainer />
 			</div>
 		</div>
 	);

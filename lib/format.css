@@ -165,3 +165,45 @@ a:hover {
 	margin-right: auto;
 	display: block;
 }
+
+#aboutMeContainer .skillBlock {
+	width: 45%;
+}
+
+#aboutMeContainer p {
+	margin: 0;
+	padding: 0;
+}
+
+#eddieSummaryComponentContainer h3 {
+	margin: 0;
+	padding: 0;
+}
+
+#eddieSummaryComponentContainer p {
+	margin-bottom: 10px;
+}
+
+#contactContainer > ul {
+	list-style: none;
+	text-align: center;
+}
+
+#contactContainer > ul li {
+	list-style: none;
+	display: inline-block;
+	margin-right: 25px;
+}
+
+#contactContainer > ul li img {
+	border-radius:100%;
+	width: 56px;
+	height: 56px;
+	border: 5px solid #cc99ff;
+	transition: all .1s linear;
+}
+
+#contactContainer > ul li img:hover {
+	width: 64px;
+	height: 64px;
+}
