@@ -3,10 +3,10 @@ var RatingService = require('./../services/RatingService')
 
 function Skill(props) {
     return (
-        <div className="skillContainer">
-            <h5 className="skillTitle">{props.skillTitle}</h5>
-            <div className="skillRating">{RatingService.retrieveRating(props.rating)}</div>
-        </div>
+        <li className="skillContainer">
+            <p className="skillTitle">{props.skillTitle}</p>
+            <span className="skillRating">{RatingService.retrieveRating(props.rating)}</span>
+        </li>
     );
 }
 

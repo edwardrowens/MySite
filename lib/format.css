@@ -30,64 +30,6 @@ a:hover {
 	color:#b3d9ff;
 }
 
-.headerLinks  li {
-	font-weight: bold;
-	display: inline-block;
-	padding:20px 20px 26px 20px;
-	vertical-align:middle;
-}
-
-#header {
-	position:relative;
-	background-color: #ffffff;
-	padding-top:5px;
-	overflow:auto;
-	padding-bottom:0px;
-}
-
-#jimmyJumpGame {
-	border:solid;
-}
-
-#header > * {
-	display:inline-block;
-}
-
-.logo {
-	width: 60px;
-	height: 60px;
-	border-radius: 20px;
-	margin-left:3px;
-	float:left;
-}
-
-.headerLinks {
-	margin-left:10px;
-	margin-top:0px;
-	padding-left:0px;
-	padding-bottom:0px;
-	margin-bottom:0px;
-}
-
-.headerDivider {
-	position:absolute;
-	top:10%;
-	bottom:10%;
-	border:1px solid #cc99ff;
-	display:inline-block;
-}
-
-#socialMedia {
-	float: right;
-	margin-right:20px;
-}
-
-#socialMedia img {
-	margin-top:10px;
-	margin-right:10px;
-	display:inline-block;
-}
-
 #app {
 	background-color:#ffffff; 
 }
@@ -99,48 +41,6 @@ a:hover {
 	border-radius:5px;
 	margin: 0 auto;
 	overflow:auto;
-}
-
-textarea {
-	resize: none;
-}
-
-.emailForm {
-	list-style-type: none;
-	width: 605px;
-	height: 500px;
-}
-
-.largeTextArea {
-	width: 600px;
-	height: 340px;
-}
-
-.smallTextArea {
-	width: 300px;
-	height: 24px;
-	margin-bottom:5px;
-}
-
-.standardButton {
-	border-radius: 5px;
-	background-color: #ffffff;
-	font-size: 1em;
-	color: #000000;
-	text-align: "center";
-	height: 45px;
-	width: 100px;
-	margin-top:5px;
-	border: 3px solid #cc99ff;
-}
-
-.standardButton:hover {
-	background-color: #cc99ff;
-}
-
-#downloadButton {
-	position:relative;
-	left:50%;
 }
 
 .dateInformationContainer {
@@ -208,83 +108,60 @@ textarea {
 #skillBlocks > * {
 	width:285px;
 }
-
-.skillProgressBarContainer {
-	width: 285px;
-	margin-top:7px;
-}
-
-.skillProgressBar {
-	height: 23px;
-	width: 100%;
-	border-radius:10px;
-	border:3px solid #595959;
-	position:relative;
-}
-
-.masteryLevel {
-	display:inline-block;
-	width:20%;
-	line-height:23px;
-	font-size:.6em;
-}
-
-.masteryLevelList {
-	width:100%;
-	height:100%;
-	font-weight:bold;
-	padding:0px;
-	margin:0px;
-	border:0px;
-	text-align:center;
-}
-
-.skillProgressBarHeader {
-	margin:0px;
-	padding:0px;
-}
-
-.footerText {
-	font-size:.7em;
-}
-
 #titleTextContainer {
 	border-bottom: solid 1px #cc99ff;
 	text-align: center;
 	margin-bottom: 25px;
 }
 
-.masterLevelDivider {
-	position:absolute;
-	top:10%;
-	bottom:10%;
-	border:1px solid #595959;
-	display:inline-block;
-}
-
-.gamesContainer>* {
-	display:inline-block;
-}
-
-#footer {
-	text-align:center;
+.skillContainer > .skillRating {
+	float: right;
 }
 
 .skillRating {
 	color: #cc99ff;
-	font-size: 1.7em;
-	margin: 0;
+	font-size: 1.4em;
 	display: inline-block;
+	margin: 0;
+	padding: 0;
 }
 
 .skillTitle {
 	margin: 0;
-	font-size: 1.5em;
+	padding: 0;
+	border: 0;
+	font-size: 1.4em;
 	display: inline-block;
+	word-wrap: break-word;
+	width: 60%;
+}
+
+.skillBlock {
+	width:35%;
+	display: inline-block;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 	margin-right: 20px;
+	vertical-align: top;
 }
 
 .skillContainer {
-	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.subTitle {
+	border-bottom: 1px solid #cc99ff;
 	display: inline-block;
+}
+
+#logo {
+	width:250px;
+	height:250px;
+	border-radius:100%;
+	border: 5px solid #cc99ff;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }

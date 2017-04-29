@@ -2,30 +2,18 @@ var React = require('react');
 var SkillsContainer = require('./../container/SkillsContainer')
 var WorkExperienceContainer = require('./../container/WorkExperienceContainer')
 var EducationContainer = require('./../container/EducationContainer')
+var AboutMeContainer = require('./../container/AboutMeContainer')
 
-var Resume = React.createClass({
-	componentDidMount: function () {
-		document.title = "Home";
-	},
-
-	render: function () {
-		return (
-			<div id="resumeContainer">
-				<div id="resume">
-					<div id="experienceBlocks">
-						<WorkExperienceContainer />
-						<EducationContainer />
-					</div>
-					<SkillsContainer />
-				</div>
-				<form method="get" action="/downloads/resume">
-					<button id="downloadButton" className="standardButton" type="submit">
-						Download
-					</button>
-				</form>
+function Resume(props) {
+	return (
+		<div id="resumeContainer">
+			<div id="resume">
+				<AboutMeContainer />
+				<WorkExperienceContainer />
+				<EducationContainer />
+				<SkillsContainer />
 			</div>
-		);
-	}
-});
-
+		</div>
+	);
+}
 module.exports = Resume;
