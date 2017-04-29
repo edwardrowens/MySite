@@ -88,11 +88,16 @@ a:hover {
 	display:inline-block;
 }
 
+#app {
+	background-color:#ffffff; 
+}
+
 #content {
 	background-color:#ffffff;
-	margin:20px;
+	width: 60%;
 	padding:30px;
 	border-radius:5px;
+	margin: 0 auto;
 	overflow:auto;
 }
 
@@ -139,72 +144,65 @@ textarea {
 }
 
 .dateInformationContainer {
-	width: 100%;
+	border: 0px;
+	margin: 0 auto;
+	padding:0px;
+	margin-bottom: 50px;
 }
 
 .dateInformationYear {
-	width:65px;
-	height:65px;
-	left:0%;
-	top:0%;
-	border-radius:50px;
+	border-radius:100%;
 	border: 5px solid #cc99ff;
-	text-align:center;
-	display:inline-block;
 	transition: all .1s linear;
+	width: 100px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#dateInformationYearContainer {
+	display: inline-block;
+}
+
+.dateInformationYearText {
+	font-size: 1.8em;
 }
 
 .dateInformationYear:hover{
-	width:75px;
-	height:75px;
+	width:115px;
+	height:115px;
 	font-size: 115%;
 }
 
 .dateInformationHead {
-	width:75%;
-	display:inline-block;
+	width:25%;
 	vertical-align:middle;
 	margin-left:5px;
 	word-wrap: break-word;
+	display: inline-block;
 }
 
 .dateInformationHeadText {
 	margin:0px;
-	border:0px;
+	padding:0px;
 }
 
 .dateInformationSubheadingText {
 	padding:0px;
 	margin:0px;
-	font-size:.9em;
+	font-size:1.3em;
 	font-style: italic;
 }
 
 .dateInformationBody {
-	padding: 10px, 15px, 15px, 15px;
-	width:100%;
+	width:50%;
+	padding: 0px;
+	vertical-align:middle;
 	word-wrap: break-word;
-	font-size:.8em;
-}
-
-.resumeBlock {
-	position:relative;
-	width:450px;
-	margin:10px;
-}
-
-.resumeBlock h2 {
-	text-align:center;
-}
-
-#resume {
-	position:relative;
-}
-
-#resume > * {
-	display:inline-block;
-	margin-right:20px;
-	vertical-align:top;
+	font-size:1.2em;
+	margin-left: 3%;
+	display: inline-block;
 }
 
 #skillBlocks > * {
@@ -250,6 +248,12 @@ textarea {
 	font-size:.7em;
 }
 
+#titleTextContainer {
+	border-bottom: solid 1px #cc99ff;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
 .masterLevelDivider {
 	position:absolute;
 	top:10%;
@@ -264,4 +268,23 @@ textarea {
 
 #footer {
 	text-align:center;
+}
+
+.skillRating {
+	color: #cc99ff;
+	font-size: 1.7em;
+	margin: 0;
+	display: inline-block;
+}
+
+.skillTitle {
+	margin: 0;
+	font-size: 1.5em;
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.skillContainer {
+	text-align: center;
+	display: inline-block;
 }

@@ -4,8 +4,10 @@ function DateInformation(props) {
 	return (
 		<div className="dateInformationContainer">
 			<a href={props.yearLink} target="_blank">
-				<div className="dateInformationYear">
-					<h2 className="dateInformationYearText">{props.year}</h2>
+				<div id="dateInformationYearContainer">
+					<div className="dateInformationYear">
+						<h2 className="dateInformationYearText">{props.year}</h2>
+					</div>
 				</div>
 			</a>
 			<div className="dateInformationHead">

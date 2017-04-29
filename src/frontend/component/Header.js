@@ -12,14 +12,6 @@ function Header(props) {
 					<li>Home</li>
 				</Router.IndexLink>
 				<div className="headerDivider"></div>
-				<Router.Link to="/resume" style={{textDecoration: 'none', color:'black'}}>
-					<li>Resume</li>
-				</Router.Link>
-				<div className="headerDivider"></div>
-				<Router.Link to="/games" style={{textDecoration: 'none', color:'black'}}>
-					<li>Games</li>
-				</Router.Link>
-				<div className="headerDivider"></div>
 				<Router.Link to="/contact" style={{textDecoration: 'none', color:'black'}}>
 					<li>Contact</li>
 				</Router.Link>
