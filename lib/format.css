@@ -26,10 +26,6 @@ a:visited {
 	color:#004d99;
 }
 
-a:hover {
-	color:#b3d9ff;
-}
-
 #app {
 	background-color:#ffffff; 
 }
@@ -206,4 +202,39 @@ a:hover {
 #contactContainer > ul li img:hover {
 	width: 64px;
 	height: 64px;
+}
+
+#pageLinks {
+	position:fixed;
+	top: 35px;
+	right: 5%;
+	width: 110px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pageLinkComponent {
+	border: 5px solid #cc99ff;
+	border-radius:100%;
+	height: 50px;
+	width: 50px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+	cursor:pointer;
+}
+
+#pageLinks ul {
+	list-style: none;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+#pageLinks li {
+	display: inline-block;
 }

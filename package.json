@@ -25,9 +25,9 @@
     "nodemailer": "*",
     "nodemailer-smtp-transport": "^2.7.2",
     "radium": "^0.18.1",
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1",
-    "react-router": "^2.7.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-scroll": "^1.5.2",
     "serve-favicon": "*",
     "superagent": "^2.2.0",
     "uglify-js": "^2.7.3"

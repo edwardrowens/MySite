@@ -9,11 +9,21 @@ function Resume(props) {
 	return (
 		<div id="resumeContainer">
 			<div id="resume">
-				<AboutMeContainer />
-				<WorkExperienceContainer />
-				<EducationContainer />
-				<SkillsContainer />
-				<ContactContainer />
+				<div id="aboutme">
+					<AboutMeContainer />
+				</div>
+				<div id="workexperience">
+					<WorkExperienceContainer />
+				</div>
+				<div id="education">
+					<EducationContainer />
+				</div>
+				<div id="skills">
+					<SkillsContainer />
+				</div>
+				<div id="contact">
+					<ContactContainer />
+				</div>
 			</div>
 		</div>
 	);

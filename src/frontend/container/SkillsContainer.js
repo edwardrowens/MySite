@@ -33,7 +33,7 @@ function SkillsContainer(props) {
             </div>
             <ul className="skillBlock">
                 <Skill rating={4} skillTitle="Maven" />
-                <Skill rating={2} skillTitle="Git" />
+                <Skill rating={3} skillTitle="Git" />
                 <Skill rating={1} skillTitle="Gradle" />
             </ul>
             <div className="subTitleContainer">
