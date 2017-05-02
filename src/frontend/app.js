@@ -1,8 +1,7 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
-var Router = require('react-router')
 
-var Resume = require('./component/Resume')
+var ContentContainer = require('./container/ContentContainer')
 var PageLinksContainer = require('./container/PageLinksContainer')
 var WorkExperienceContainer = require('./container/WorkExperienceContainer')
 var ContactContainer = require('./container/ContactContainer')
@@ -17,7 +16,7 @@ var Application = React.createClass({
 		return (
 			<div>
 				<div id="content">
-					<Resume/>
+					<ContentContainer/>
 				</div>
 				<PageLinksContainer />
 			</div>

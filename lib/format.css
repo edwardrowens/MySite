@@ -39,14 +39,14 @@ a:visited {
 	overflow:auto;
 }
 
-.dateInformationContainer {
+.workExperienceContainer {
 	border: 0px;
 	margin: 0 auto;
 	padding:0px;
 	margin-bottom: 50px;
 }
 
-.dateInformationYear {
+.workExperienceYear {
 	border-radius:100%;
 	border: 5px solid #cc99ff;
 	transition: all .1s linear;
@@ -57,21 +57,21 @@ a:visited {
 	justify-content: center;
 }
 
-#dateInformationYearContainer {
+#workExperienceYearContainer {
 	display: inline-block;
 }
 
-.dateInformationYearText {
+.workExperienceYearText {
 	font-size: 1.8em;
 }
 
-.dateInformationYear:hover{
+.workExperienceYear:hover{
 	width:115px;
 	height:115px;
 	font-size: 115%;
 }
 
-.dateInformationHead {
+.workExperienceHead {
 	width:25%;
 	vertical-align:middle;
 	margin-left:5px;
@@ -79,19 +79,19 @@ a:visited {
 	display: inline-block;
 }
 
-.dateInformationHeadText {
+.workExperienceHeadText {
 	margin:0px;
 	padding:0px;
 }
 
-.dateInformationSubheadingText {
+.workExperienceSubheadingText {
 	padding:0px;
 	margin:0px;
 	font-size:1.3em;
 	font-style: italic;
 }
 
-.dateInformationBody {
+.workExperienceBody {
 	width:50%;
 	padding: 0px;
 	vertical-align:middle;
@@ -208,7 +208,7 @@ a:visited {
 	position:fixed;
 	top: 35px;
 	right: 5%;
-	width: 110px;
+	width: 115px;
 	display: flex;
     align-items: center;
     justify-content: center;
@@ -226,6 +226,14 @@ a:visited {
 	padding: 0;
 	margin-bottom: 10px;
 	cursor:pointer;
+	transition: all .3s linear;
+	word-wrap: break-word; 
+}
+
+#pageLinkComponent:hover {
+	height: 70px;
+	width: 70px;
+	font-size: 1em;
 }
 
 #pageLinks ul {

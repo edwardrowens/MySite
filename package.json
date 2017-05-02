@@ -1,6 +1,7 @@
 {
   "name": "eddieowens",
   "version": "1.0.0",
+  "private" : true,
   "main": "server.js",
   "babel": {
     "plugins": [
@@ -11,25 +12,20 @@
     "start": "babel src -d lib && browserify ./lib/frontend/app.js | uglifyjs > ./lib/app-compiled.js && node ./lib/backend/server.js"
   },
   "engines": {
-    "node": "6.9.4",
-    "npm": "2.15.9"
+    "node": "6.10.2",
+    "npm": "4.5.0"
   },
   "dependencies": {
-    "babel-cli": "^6.16.0",
-    "babel-plugin-transform-react-jsx": "^6.8.0",
-    "body-parser": "^1.15.2",
-    "browserify": "^13.1.0",
-    "craftyjs": "^0.7.1",
-    "express": "^4.14.0",
+    "babel-cli": "*",
+    "babel-plugin-transform-react-jsx": "*",
+    "body-parser": "*",
+    "browserify": "*",
+    "express": "*",
     "marked": "*",
-    "nodemailer": "*",
-    "nodemailer-smtp-transport": "^2.7.2",
-    "radium": "^0.18.1",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-scroll": "^1.5.2",
+    "react": "*",
+    "react-dom": "*",
+    "react-scroll": "*",
     "serve-favicon": "*",
-    "superagent": "^2.2.0",
-    "uglify-js": "^2.7.3"
+    "uglify-js": "*"
   }
 }
