@@ -1,6 +1,7 @@
 var React = require('react')
 
 var PageLinkComponent = require('../component/PageLinkComponent')
+var VerticalLineComponent = require('../component/VerticalLineComponent')
 
 function PageLinksContainer(props) {
     return (

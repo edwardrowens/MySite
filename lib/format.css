@@ -226,14 +226,14 @@ a:visited {
 	padding: 0;
 	margin-bottom: 10px;
 	cursor:pointer;
-	transition: all .3s linear;
-	word-wrap: break-word; 
+	transition: all .2s linear;
 }
 
 #pageLinkComponent:hover {
-	height: 70px;
-	width: 70px;
 	font-size: 1em;
+	height: 50px;
+	width: 100px;
+	border-radius:25%;
 }
 
 #pageLinks ul {
@@ -245,4 +245,12 @@ a:visited {
 
 #pageLinks li {
 	display: inline-block;
+}
+
+.verticalLine {
+	margin: 0;
+	padding: 0;
+	size: 50px;
+	width:1px;
+	border: 9px solid #cc99ff;
 }

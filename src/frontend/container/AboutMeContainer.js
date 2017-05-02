@@ -7,7 +7,7 @@ function AboutMeContainer(props) {
     return (
         <div id="aboutMeContainer">
             <img id="logo" src="resources/assets/logo.jpg" title='Created by Will Kevans' />
-            <Title text="About me" />
+            <Title text="About Me" />
             <div>
                 <h2 className="subTitle">Intro</h2>
                 <AboutMeComponent />
