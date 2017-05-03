@@ -16,9 +16,6 @@ function AboutMeContainer(props) {
                 <h2 className="subTitle">Summary</h2>
                 <EddieSummaryComponent />
             </div>
-            <div>
-
-            </div>
         </div>
     )
 }

@@ -23,8 +23,10 @@
     "express": "*",
     "marked": "*",
     "react": "*",
+    "react-component-visibility": "^2.0.0",
     "react-dom": "*",
     "react-scroll": "*",
+    "react-visibility-sensor": "^3.9.0",
     "serve-favicon": "*",
     "uglify-js": "*"
   }

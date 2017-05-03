@@ -1,22 +1,19 @@
 var React = require('react')
 
 var PageLinkComponent = require('../component/PageLinkComponent')
-var VerticalLineComponent = require('../component/VerticalLineComponent')
 
-var PageLinksContainer = React.createClass({
-    render: function (props) {
-        return (
-            <div id="pageLinks">
-                <ul>
-                    <li><PageLinkComponent link="contentContainer" text="About Me" /></li>
-                    <li><PageLinkComponent link="workexperience" text="Experience" /></li>
-                    <li><PageLinkComponent link="education" text="Education" /></li>
-                    <li><PageLinkComponent link="skills" text="Skills" /></li>
-                    <li><PageLinkComponent link="contact" text="Contact" /></li>
-                </ul>
-            </div>
-        )
-    }
-})
+function PageLinksContainer(props) {
+    return (
+        <div id="pageLinks">
+            <ul>
+                <PageLinkComponent isVisible={props.aboutMeContainerVisible} link="contentContainer" text="About Me" />
+                <PageLinkComponent isVisible={props.workExperienceContainerVisible} link="workexperience" text="Experience" />
+                <PageLinkComponent isVisible={props.educationContainerVisible} link="education" text="Education" />
+                <PageLinkComponent isVisible={props.skillsContainerVisible} link="skills" text="Skills" />
+                <PageLinkComponent isVisible={props.contactContainerVisible} link="contact" text="Contact" />
+            </ul>
+        </div>
+    )
+}
 
 module.exports = PageLinksContainer
