@@ -47,7 +47,7 @@ var Application = React.createClass({
 									  onSkillsContainerVisible={this.onSkillsContainerVisible}
 									  onEducationContainerVisible={this.onEducationContainerVisible}
 									  onAboutMeContainerVisible={this.onAboutMeContainerVisible}
-									  oncontactContainerVisible={this.onContactContainerVisible}/>
+									  onContactContainerVisible={this.onContactContainerVisible}/>
 				</div>
 				<PageLinksContainer workExperienceContainerVisible={this.state.workExperienceContainerVisible} 
 									skillsContainerVisible={this.state.skillsContainerVisible}

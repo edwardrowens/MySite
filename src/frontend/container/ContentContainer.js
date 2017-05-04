@@ -10,24 +10,29 @@ function ContentContainer(props) {
 	return (
 		<div id="contentContainer">
 			<div id="aboutme">
-				<AboutMeContainer />
-				<VisibilitySensor onChange={props.onAboutMeContainerVisible} style={{border: 'solid'}}/>
+				<VisibilitySensor onChange={props.onAboutMeContainerVisible} partialVisibility={true}>
+					<AboutMeContainer />
+				</VisibilitySensor>
 			</div>
 			<div id="workexperience">
-				<WorkExperienceContainer />
-				<VisibilitySensor onChange={props.onWorkExperienceContainerVisible} style={{border: 'solid'}}/>
+				<VisibilitySensor onChange={props.onWorkExperienceContainerVisible} partialVisibility={true}>
+					<WorkExperienceContainer />
+				</VisibilitySensor>
 			</div>
 			<div id="education">
-				<EducationContainer />
-				<VisibilitySensor onChange={props.onEducationContainerVisible} style={{border: 'solid'}}/>
+				<VisibilitySensor onChange={props.onEducationContainerVisible} partialVisibility={true}>
+					<EducationContainer />
+				</VisibilitySensor>
 			</div>
 			<div id="skills">
-				<SkillsContainer />
-				<VisibilitySensor onChange={props.onSkillsContainerVisible} style={{border: 'solid'}}/>
+				<VisibilitySensor onChange={props.onSkillsContainerVisible} partialVisibility={true}>
+					<SkillsContainer />
+				</VisibilitySensor>
 			</div>
 			<div id="contact">
-				<ContactContainer />
-				<VisibilitySensor onChange={props.onContactContainerVisible} style={{border: 'solid'}}/>
+				<VisibilitySensor onChange={props.onContactContainerVisible} partialVisibility={true}>
+					<ContactContainer />
+				</VisibilitySensor>
 			</div>
 		</div>
 	);
