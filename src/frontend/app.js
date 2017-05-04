@@ -13,14 +13,13 @@ var Application = React.createClass({
 			skillsContainerVisible: false,
 			workExperienceContainerVisible: false,
 			contactContainerVisible: false,
-			atBottom: false,
-			atTop: false
+			atBottom: false
 		})
 	},
 
 	updateUrl: function (hash) {
 		if (history.pushState) {
-			history.replaceState(null, null, hash)
+			history.replaceState({}, '', hash)
 		} else {
 			location.hash = hash
 		}
@@ -32,28 +31,19 @@ var Application = React.createClass({
 		} else {
 			this.setState({ atBottom: false })
 		}
-		if (document.body.scrollTop === 0) {
-			this.setState({ atTop: true })
-		} else {
-			this.setState({ atTop: false })
-		}
 	},
 
 	componentDidMount: function () {
 		document.title = "Eddie Owens";
 		window.onscroll = this.onscroll
-		if (document.body.scrollTop === 0) {
-			this.setState({ atTop: true })
-		}
 	},
 
 	onAboutMeContainerVisible: function (isVisible) {
-		var v = isVisible || this.state.atTop
 		if (!this.state.atBottom) {
-			if (v) {
+			if (isVisible) {
 				this.updateUrl("#aboutme")
 			}
-			this.setState({ aboutMeContainerVisible: v })
+			this.setState({ aboutMeContainerVisible: isVisible })
 		} else {
 			this.setState({ aboutMeContainerVisible: false })
 		}
