@@ -8,29 +8,29 @@ var VisibilitySensor = require('react-visibility-sensor')
 
 function ContentContainer(props) {
 	return (
-		<div id="contentContainer">
+		<div id="contentContainer" >
 			<div id="aboutme">
-				<VisibilitySensor onChange={props.onAboutMeContainerVisible} partialVisibility={true}>
+				<VisibilitySensor onChange={props.onAboutMeContainerVisible} partialVisibility={true} containment={document.getElementById(props.containmentId)}>
 					<AboutMeContainer />
 				</VisibilitySensor>
 			</div>
-			<div id="workexperience">
-				<VisibilitySensor onChange={props.onWorkExperienceContainerVisible} partialVisibility={true}>
+			<div id="experience">
+				<VisibilitySensor onChange={props.onWorkExperienceContainerVisible} partialVisibility={true} containment={document.getElementById(props.containmentId)}>
 					<WorkExperienceContainer />
 				</VisibilitySensor>
 			</div>
 			<div id="education">
-				<VisibilitySensor onChange={props.onEducationContainerVisible} partialVisibility={true}>
+				<VisibilitySensor onChange={props.onEducationContainerVisible} partialVisibility={true} containment={document.getElementById(props.containmentId)}>
 					<EducationContainer />
 				</VisibilitySensor>
 			</div>
 			<div id="skills">
-				<VisibilitySensor onChange={props.onSkillsContainerVisible} partialVisibility={true}>
+				<VisibilitySensor onChange={props.onSkillsContainerVisible} partialVisibility={true} containment={document.getElementById(props.containmentId)}>
 					<SkillsContainer />
 				</VisibilitySensor>
 			</div>
 			<div id="contact">
-				<VisibilitySensor onChange={props.onContactContainerVisible} partialVisibility={true}>
+				<VisibilitySensor onChange={props.onContactContainerVisible} partialVisibility={true} containment={document.getElementById(props.containmentId)}>
 					<ContactContainer />
 				</VisibilitySensor>
 			</div>

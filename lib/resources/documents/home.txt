@@ -1,1 +1,2 @@
-Hi, my name is Edward Owens and I'm a software engineer based out of Los Angeles. I like making stuff (like this website). It's an SPA built with React.js and Node.js (via Express). I also did all of the styling and design. This site is for all things Eddie. Have a look around!
+
+Hi, my name is Edward Owens and I'm a software engineer based out of Los Angeles. I mostly work with java but I also like C++ and JS. I'm always trying to learn new things and gather new skills. I really like making stuff (like this website). It's an SPA built with React.js and Node.js (via Express). I also did all of the styling and design. This site is for all things Eddie. Have a look around!
