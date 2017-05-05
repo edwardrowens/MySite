@@ -36,6 +36,7 @@ var Application = React.createClass({
 	componentDidMount: function () {
 		document.title = "Eddie Owens";
 		window.onscroll = this.onscroll
+		this.updateUrl('#aboutme')
 	},
 
 	onAboutMeContainerVisible: function (isVisible) {
@@ -96,10 +97,10 @@ var Application = React.createClass({
 				<VisibilitySensorWindow />
 				<div id="content">
 					<ContentContainer containmentId={'visibilitySensorWindow'}
+						onAboutMeContainerVisible={this.onAboutMeContainerVisible}
 						onWorkExperienceContainerVisible={this.onWorkExperienceContainerVisible}
 						onSkillsContainerVisible={this.onSkillsContainerVisible}
 						onEducationContainerVisible={this.onEducationContainerVisible}
-						onAboutMeContainerVisible={this.onAboutMeContainerVisible}
 						onContactContainerVisible={this.onContactContainerVisible} />
 				</div>
 				<PageLinksContainer workExperienceContainerVisible={this.state.workExperienceContainerVisible}
