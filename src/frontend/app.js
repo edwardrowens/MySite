@@ -41,7 +41,8 @@ var Application = React.createClass({
 	},
 
 	componentWillMount: function () {
-		this.setState({initialHash: location.hash})
+		var startingHash = location.hash ? location.hash : "#aboutme"
+		this.setState({initialHash: startingHash})
 	},
 
 	onAboutMeContainerVisible: function (isVisible) {
