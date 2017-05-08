@@ -13,7 +13,8 @@ var Application = React.createClass({
 			skillsContainerVisible: false,
 			workExperienceContainerVisible: false,
 			contactContainerVisible: false,
-			atBottom: false
+			atBottom: false,
+			initialHash: '#aboutme'
 		})
 	},
 
@@ -36,6 +37,11 @@ var Application = React.createClass({
 	componentDidMount: function () {
 		document.title = "Eddie Owens";
 		window.onscroll = this.onscroll
+		this.updateUrl(this.state.initialHash)
+	},
+
+	componentWillMount: function () {
+		this.setState({initialHash: location.hash})
 	},
 
 	onAboutMeContainerVisible: function (isVisible) {

@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(favicon(path.join(__dirname, '../../lib', 'resources', 'assets', 'favicon.png')));
 
-app.get('*', function (req, res) {
+app.get('/', function (req, res) {
 	res.sendFile(path.resolve(__dirname, '..', '..', 'index.html'));
 });
 
