@@ -36,7 +36,6 @@ var Application = React.createClass({
 	componentDidMount: function () {
 		document.title = "Eddie Owens";
 		window.onscroll = this.onscroll
-		this.updateUrl('#aboutme')
 	},
 
 	onAboutMeContainerVisible: function (isVisible) {
