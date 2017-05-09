@@ -16,5 +16,5 @@ app.get('/', function (req, res) {
 	res.sendFile(path.resolve(__dirname, '..', '..', 'index.html'));
 });
 
-console.log("Server started");
-var server = app.listen(process.env.PORT || 8000);
+console.log("Server started: " + PORT);
+var server = app.listen(PORT);
