@@ -9,7 +9,7 @@
     ]
   },
   "scripts": {
-    "start": "babel src -d lib && browserify ./lib/frontend/app.js | uglifyjs > ./lib/app-compiled.js && node ./lib/backend/server.js"
+    "start": "babel src -d lib && browserify ./lib/frontend/app.js | uglifyjs > ./lib/build/app-compiled.js && node ./lib/backend/server.js"
   },
   "engines": {
     "node": "6.10.2",
