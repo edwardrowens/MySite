@@ -5,7 +5,7 @@ var app = express()
 var favicon = require('serve-favicon')
 
 // grab the configuration
-var PORT = process.env.PORT || 80
+var PORT = process.env.PORT || 8000
 
 app.use(express.static(path.join(__dirname, '..', 'build')))
 app.use(bodyParser.urlencoded({ extended: true }))

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-site
+spec:  # specification of the pod's contents
+  containers:
+  - name: my-site
+    image: "edwardrowens/mysite:latest"
+    ports:
+    - containerPort: 8000
