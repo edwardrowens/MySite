@@ -10,10 +10,10 @@ function WorkExperienceContainer(props) {
                 year="2016"
                 title="Software Engineer"
                 subHeading="Gamblit Gaming"
-                body={"Platform engineer working with both Java and C++ on multiple " +
+                body={"Platform engineer working with Java on multiple " +
                     "enhancements including in app purchases for all games which were " +
                     "ported onto our hardware. I also built the integration test framework " + 
-                    "that is being used to test the core software in all of Gamblit's products. I Used Spring, Maven, Git, and " +
+                    "that is being used to test the core software in all of Gamblit's products. I Used Spring Boot, Maven, Git, and " +
                     "many other libraries to perform my tasks."} />
             <WorkExperienceComponent yearLink="http://www.chpconsulting.com/"
                 year="2015"

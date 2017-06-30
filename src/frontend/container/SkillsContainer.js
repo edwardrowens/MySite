@@ -14,10 +14,10 @@ function SkillsContainer(props) {
                 <Skill rating={3} skillTitle="Android" />
                 <Skill rating={3} skillTitle="Retrofit" />
                 <Skill rating={3} skillTitle="Socket.io" />
-                <Skill rating={2} skillTitle="React" />
-                <Skill rating={2} skillTitle="Node" />
-                <Skill rating={2} skillTitle="Spring Boot" />
-                <Skill rating={1} skillTitle="SQL" />
+                <Skill rating={3} skillTitle="React" />
+                <Skill rating={3} skillTitle="Node" />
+                <Skill rating={3} skillTitle="Spring Boot" />
+                <Skill rating={3} skillTitle="SQL" />
             </ul>
             <ul className="skillBlock">
                 <Skill rating={3} skillTitle="C++" />
@@ -31,6 +31,11 @@ function SkillsContainer(props) {
             <div className="subTitleContainer">
                 <h2 className="subTitle">Dev Utilities</h2>
             </div>
+            <ul className="skillBlock">
+                <Skill rating={2} skillTitle="Kubernetes" />
+                <Skill rating={2} skillTitle="Google Cloud Platform" />
+                <Skill rating={2} skillTitle="Docker" />
+            </ul>
             <ul className="skillBlock">
                 <Skill rating={4} skillTitle="Maven" />
                 <Skill rating={3} skillTitle="Git" />
@@ -49,7 +54,7 @@ function SkillsContainer(props) {
             </ul>
             <ul className="skillBlock">
                 <Skill rating={5} skillTitle="Singleton Pattern" />
-                <Skill rating={4} skillTitle="MVC" />
+                <Skill rating={4} skillTitle="N-tier" />
                 <Skill rating={4} skillTitle="Factory Pattern" />
                 <Skill rating={3} skillTitle="Multithreading and Concurrency" />
                 <Skill rating={3} skillTitle="Algorithms" />
