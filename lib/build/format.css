@@ -1,3 +1,9 @@
 .overflow { 
     overflow: auto
 }
+
+.slick-next, .slick-prev, .slick-next:before, .slick-prev:before {
+    width: 0px;
+    height: 0px;
+    font-size: 0px;
+}

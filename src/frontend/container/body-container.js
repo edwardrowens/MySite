@@ -47,12 +47,12 @@ export default class BodyContainer extends React.Component {
 
     render() {
         return (
-            <div className='mdl-grid'>
+            <div className='mdl-grid' >
                 <div className="mdl-cell--middle">
                     <img src='assets/left_arrow.png' onClick={this.onPreviousContainer} />
                 </div>
                 <div className="mdl-layout-spacer"></div>
-                <TransitionAnimationView animateFromRight={this.state.animateFromRight} className="mdl-cell mdl-cell--4-col" style={{ display: 'inline-block' }}>
+                <TransitionAnimationView animateFromRight={this.state.animateFromRight} className="mdl-cell mdl-cell--4-col" style={{ position: 'relative', height: 500 }}>
                     {this.containers[this.state.index]}
                 </TransitionAnimationView>
                 <div className="mdl-layout-spacer"></div>

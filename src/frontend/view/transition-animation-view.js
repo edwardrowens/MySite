@@ -10,20 +10,28 @@ export default (props) => {
     }
     let animateFromRight = {
         base: {
-            transform: 'translate(200%)',
-            display: 'inline-block'
+            transform: 'translate(150%, -50%)',
+            position: 'absolute',
+            margin: 'auto',
+            left: '50%',
+            top: '50%'
         },
 
         enter: {
-            transform: 'translate(0%)',
+            transform: 'translate(-50%, -50%)',
             transition: 'transform 500ms ease-in-out',
-            display: 'inline-block'
+            position: 'absolute',
+            left: '50%',
+            top: '50%'
         },
 
         leave: {
-            transform: 'translate(-200%)',
+            transform: 'translate(-250%, -50%)',
             transition: 'transform 500ms ease-in-out',
-            display: 'inline-block'
+            position: 'absolute',
+            margin: 'auto',
+            left: '50%',
+            top: '50%'
         }
     }
 
