@@ -1,5 +1,6 @@
 import React from 'react'
 import Slider from 'react-slick'
+import UUID from 'uuid/v4'
 
 import SlickCarouselItem from '../view/slick-carousel-item-view'
 import SlickArrowView from '../view/slick-arrow-view'
@@ -14,13 +15,16 @@ import ContainerWrapper from '../view/container-wrapper-view'
 export default class SlickCarousel extends React.Component {
     constructor(props) {
         super(props)
+        const pagingIconsStyle =  {
+            outline: 'none'
+        }
         this.customPagingIcons = [
-            <i className="material-icons">home</i>,
-            <i className="material-icons">account_circle</i>,
-            <i className="material-icons">book</i>,
-            <i className="material-icons">work</i>,
-            <i className="material-icons">code</i>,
-            <i className="material-icons">message</i>
+            <a id='home-link' style={pagingIconsStyle} className="paging-link" key={UUID()}><i className="material-icons">home</i></a>,
+            <a id='about-me-link' style={pagingIconsStyle} className="paging-link" key={UUID()}><i className="material-icons">account_circle</i></a>,
+            <a id='education-link' style={pagingIconsStyle} className="paging-link" key={UUID()}><i className="material-icons">book</i></a>,
+            <a id='experience-link' style={pagingIconsStyle} className="paging-link" key={UUID()}><i className="material-icons">work</i></a>,
+            <a id='skills-link' style={pagingIconsStyle} className="paging-link" key={UUID()}><i className="material-icons">code</i></a>,
+            <a id='contact-link' style={pagingIconsStyle} className="paging-link" key={UUID()}><i className="material-icons">message</i></a>
         ]
 
         this.next = this.next.bind(this)
@@ -36,9 +40,10 @@ export default class SlickCarousel extends React.Component {
     }
 
     render() {
-        let settings = {
+        const settings = {
+            dotsClass: 'slick-dots slick-thumb',
             customPaging: (i) => {
-                <a>{this.customPagingIcons[i]}</a>
+                return this.customPagingIcons[i]
             },
             infinite: false,
             slidesToShow: 1,
@@ -50,7 +55,7 @@ export default class SlickCarousel extends React.Component {
 
         return (
             <div className="mdl-grid">
-                <SlickArrowView className="mdl-cell--middle" onClick={this.prev} src='assets/left_arrow.png' />
+                <SlickArrowView className="mdl-cell--middle  mdl-layout--large-screen-only" onClick={this.prev} src='assets/left_arrow.png' />
                 <div className="mdl-layout-spacer"></div>
                 <div className="mdl-cell--middle" style={{ width: '80%' }}>
                     <div>
@@ -89,7 +94,13 @@ export default class SlickCarousel extends React.Component {
                     </div>
                 </div>
                 <div className="mdl-layout-spacer"></div>
-                <SlickArrowView className="mdl-cell--middle" onClick={this.next} src='assets/right_arrow.png' />
+                <SlickArrowView className="mdl-cell--middle mdl-layout--large-screen-only" onClick={this.next} src='assets/right_arrow.png' />
+                <div className="mdl-tooltip" htmlFor="home-link">Home</div>
+                <div className="mdl-tooltip" htmlFor="about-me-link">About me</div>
+                <div className="mdl-tooltip" htmlFor="education-link">Education</div>
+                <div className="mdl-tooltip" htmlFor="experience-link">Experience</div>
+                <div className="mdl-tooltip" htmlFor="skills-link">Skills</div>
+                <div className="mdl-tooltip" htmlFor="contact-link">Contact</div>
             </div>
         )
     }

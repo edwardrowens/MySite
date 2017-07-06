@@ -1,3 +1,21 @@
-.overflow { 
+.overflow {
     overflow: auto
+}
+
+.slick-dots li {
+    margin-right: 15px;
+}
+
+/*change from 20x20 to 30x30 on hover for paging*/
+.paging-link:hover {
+    color: rgba(204, 153, 255, 1);
+}
+
+.paging-link {
+    color: rgba(204, 153, 255, .35);
+    transition: all 200ms ease-in-out
+}
+
+li.slick-active .paging-link {
+    color: rgba(204, 153, 255, 1);
 }
