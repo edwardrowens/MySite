@@ -14,6 +14,15 @@ import ContainerWrapper from '../view/container-wrapper-view'
 export default class SlickCarousel extends React.Component {
     constructor(props) {
         super(props)
+        this.customPagingIcons = [
+            <i className="material-icons">home</i>,
+            <i className="material-icons">account_circle</i>,
+            <i className="material-icons">book</i>,
+            <i className="material-icons">work</i>,
+            <i className="material-icons">code</i>,
+            <i className="material-icons">message</i>
+        ]
+
         this.next = this.next.bind(this)
         this.prev = this.prev.bind(this)
     }
@@ -28,6 +37,9 @@ export default class SlickCarousel extends React.Component {
 
     render() {
         let settings = {
+            customPaging: (i) => {
+                <a>{this.customPagingIcons[i]}</a>
+            },
             infinite: false,
             slidesToShow: 1,
             speed: 500,
