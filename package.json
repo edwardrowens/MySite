@@ -11,6 +11,7 @@
     "npm": "4.5.0"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
@@ -19,6 +20,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-inline-transition-group": "^2.1.7",
+    "react-markdown": "^2.5.0",
     "react-responsive": "^1.3.0",
     "react-router-dom": "^4.1.1",
     "react-slick": "^0.14.11",

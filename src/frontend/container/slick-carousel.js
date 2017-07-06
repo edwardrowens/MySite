@@ -1,9 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
 
-import PreviousArrowView from '../view/previous-arrow-view'
-import SlickCarouselItem from '../component/dynamic-slick-carousel-item-component'
-import NextArrowView from '../view/next-arrow-view'
+import SlickCarouselItem from '../view/slick-carousel-item-view'
 import SlickArrowView from '../view/slick-arrow-view'
 import AboutMeContainer from './about-me-container'
 import ContactContainer from './contact-container'
@@ -11,6 +9,7 @@ import EducationContainer from './education-container'
 import HomeContainer from './home-container'
 import SkillsContainer from './skills-container'
 import ExperienceContainer from './experience-container'
+import ContainerWrapper from '../view/container-wrapper-view'
 
 export default class SlickCarousel extends React.Component {
     constructor(props) {
@@ -29,15 +28,13 @@ export default class SlickCarousel extends React.Component {
 
     render() {
         let settings = {
-            className: 'center',
-            centerMode: true,
             infinite: false,
-            centerPadding: '60px',
-            slidesToShow: 2,
+            slidesToShow: 1,
             speed: 500,
-            dots: true
+            dots: true,
+            adaptiveHeight: true,
+            arrows: false
         }
-        console.log(JSON.stringify(this.props))
 
         return (
             <div className="mdl-grid">
@@ -47,19 +44,34 @@ export default class SlickCarousel extends React.Component {
                     <div>
                         <Slider {...settings} ref={c => this.slider = c}>
                             <SlickCarouselItem>
-                             <AboutMeContainer />
+                                <ContainerWrapper>
+                                    <HomeContainer />
+                                </ContainerWrapper>
                             </SlickCarouselItem>
                             <SlickCarouselItem>
-                             <EducationContainer />
+                                <ContainerWrapper>
+                                    <AboutMeContainer />
+                                </ContainerWrapper>
                             </SlickCarouselItem>
                             <SlickCarouselItem>
-                             <ExperienceContainer />
+                                <ContainerWrapper>
+                                    <EducationContainer />
+                                </ContainerWrapper>
                             </SlickCarouselItem>
                             <SlickCarouselItem>
-                             <SkillsContainer />
+                                <ContainerWrapper>
+                                    <ExperienceContainer />
+                                </ContainerWrapper>
                             </SlickCarouselItem>
                             <SlickCarouselItem>
-                             <ContactContainer />
+                                <ContainerWrapper>
+                                    <SkillsContainer />
+                                </ContainerWrapper>
+                            </SlickCarouselItem>
+                            <SlickCarouselItem>
+                                <ContainerWrapper>
+                                    <ContactContainer />
+                                </ContainerWrapper>
                             </SlickCarouselItem>
                         </Slider>
                     </div>
