@@ -51,3 +51,4 @@ node_modules/
 lib/**/*.js
 lib/*.js
 .kube/
+package-lock.json
