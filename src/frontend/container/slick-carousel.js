@@ -26,7 +26,6 @@ export default class SlickCarousel extends React.Component {
         }
         this.customPagingIcons = [
             <a id='home-link' style={pagingIconsStyle} className="paging-link" key={UUID()}><i className="material-icons">home</i></a>,
-            <a id='about-me-link' style={pagingIconsStyle} className="paging-link" key={UUID()}><i className="material-icons">account_circle</i></a>,
             <a id='education-link' style={pagingIconsStyle} className="paging-link" key={UUID()}><i className="material-icons">book</i></a>,
             <a id='experience-link' style={pagingIconsStyle} className="paging-link" key={UUID()}><i className="material-icons">work</i></a>,
             <a id='skills-link' style={pagingIconsStyle} className="paging-link" key={UUID()}><i className="material-icons">code</i></a>,
@@ -84,11 +83,6 @@ export default class SlickCarousel extends React.Component {
                             <SlickCarouselItem>
                                 <ContainerWrapper>
                                     <HomeContainer />
-                                </ContainerWrapper>
-                            </SlickCarouselItem>
-                            <SlickCarouselItem>
-                                <ContainerWrapper>
-                                    <AboutMeContainer />
                                 </ContainerWrapper>
                             </SlickCarouselItem>
                             <SlickCarouselItem>
