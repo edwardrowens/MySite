@@ -3,16 +3,20 @@ var webpack = require('webpack')
 
 module.exports = {
     entry: './src/frontend/application.js',
-    output: { path: path.join(__dirname, 'lib', 'build'), filename: 'app-compiled.js' },
+    output: {
+        path: path.join(__dirname, 'lib', 'build'),
+        filename: 'app-compiled.js'
+    },
     module: {
-        loaders: [
-            {
-                test: /.jsx?$/,
+        loaders: [{
+                test: /\.js$/,
                 loader: 'babel-loader',
-                exclude: /node_modules/,
-                query: {
-                    presets: ['es2015', 'react']
-                }
+                exclude: /node_modules/
+            },
+            {
+                test: /\.jsx$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/
             }
         ]
     }

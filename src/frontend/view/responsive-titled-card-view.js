@@ -10,13 +10,13 @@ export default (props) => {
                 (matches) => {
                     if (matches) {
                         return (
-                            <TitledCardView key={props.key} style={props.style} contentStyle={props.contentStyle} title={props.title}>
+                            <TitledCardView className={props.className} key={props.key} style={props.style} contentStyle={props.contentStyle} title={props.title}>
                                 {props.children}
                             </TitledCardView>
                         )
                     } else {
                         return (
-                            < TitledCardView key={props.key} style={props.smallScreenStyle} contentStyle={props.contentStyle} title={props.title}>
+                            < TitledCardView className={props.className} key={props.key} style={props.smallScreenStyle} contentStyle={props.contentStyle} title={props.title}>
                                 {props.children}
                             </TitledCardView>
                         )
