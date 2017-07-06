@@ -8,11 +8,11 @@ class Application extends React.Component {
     render() {
         return (
             <div className="mdl-layout mdl-js-layout" >
-                <div className="mdl-layout-spacer" ></div>
+                <div className="mdl-layout-spacer mdl-layout--large-screen-only" ></div>
                 <div>
                     <SlickCarousel />
                 </div>
-                <div className="mdl-layout-spacer" ></div>
+                <div className="mdl-layout-spacer mdl-layout--large-screen-only" ></div>
             </div>
         )
     }

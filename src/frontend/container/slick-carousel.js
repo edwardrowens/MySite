@@ -15,7 +15,13 @@ import ContainerWrapper from '../view/container-wrapper-view'
 export default class SlickCarousel extends React.Component {
     constructor(props) {
         super(props)
-        const pagingIconsStyle =  {
+
+        this.state = {
+            width: 0,
+            height: 0
+        }
+
+        const pagingIconsStyle = {
             outline: 'none'
         }
         this.customPagingIcons = [
@@ -29,6 +35,21 @@ export default class SlickCarousel extends React.Component {
 
         this.next = this.next.bind(this)
         this.prev = this.prev.bind(this)
+        this.setState = this.setState.bind(this)
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this)
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions() {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
 
     next() {
@@ -54,10 +75,10 @@ export default class SlickCarousel extends React.Component {
         }
 
         return (
-            <div className="mdl-grid">
-                <SlickArrowView className="mdl-cell--middle  mdl-layout--large-screen-only" onClick={this.prev} src='assets/left_arrow.png' />
-                <div className="mdl-layout-spacer"></div>
-                <div className="mdl-cell--middle" style={{ width: '80%' }}>
+            <div className="mdl-grid" style={{ width: '100%' }}>
+                <SlickArrowView className="mdl-cell--middle mdl-layout--large-screen-only" onClick={this.prev} src='assets/left_arrow.png' />
+                <div className="mdl-layout-spacer mdl-layout--large-screen-only"></div>
+                <div className="mdl-cell--middle" style={{ width: this.state.width > 1025 ? '80%' : '100%' }}>
                     <div>
                         <Slider {...settings} ref={c => this.slider = c}>
                             <SlickCarouselItem>
@@ -93,7 +114,7 @@ export default class SlickCarousel extends React.Component {
                         </Slider>
                     </div>
                 </div>
-                <div className="mdl-layout-spacer"></div>
+                <div className="mdl-layout-spacer mdl-layout--large-screen-only"></div>
                 <SlickArrowView className="mdl-cell--middle mdl-layout--large-screen-only" onClick={this.next} src='assets/right_arrow.png' />
                 <div className="mdl-tooltip" htmlFor="home-link">Home</div>
                 <div className="mdl-tooltip" htmlFor="about-me-link">About me</div>
