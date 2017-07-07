@@ -40,3 +40,7 @@ li.slick-active .paging-link {
 .mdl-chip__text {
     font-size: 17px;
 }
+
+.mdl-card__supporting-text {
+    color: #262626;
+}
