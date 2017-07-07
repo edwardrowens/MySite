@@ -8,55 +8,65 @@ export default class HomeContainer extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            intro: ''
+            aboutme: '',
+            thissite: ''
         }
         this.componentDidMount = this.componentDidMount.bind(this)
         this.setState = this.setState.bind(this)
     }
 
     componentDidMount() {
-        Axios.get("/assets/docs/intro.md").then((result) => {
-            this.setState({ intro: result.data })
+        Axios.get("/assets/docs/aboutme.md").then((result) => {
+            this.setState({ aboutme: result.data })
+        })
+        Axios.get("/assets/docs/thissite.md").then((result) => {
+            this.setState({ thissite: result.data })
         })
     }
 
     render() {
         return (
-            <div className="mdl-grid" >
+            <div className="mdl-grid" style={{ justifyContent: 'center' }}>
                 <div className="mdl-layout-spacer"></div>
-                <div style={{ background: '#f0f0f5', padding: 10, borderRadius: 10 }} className="mdl-cell mdl-cell--12-col">
-                    <h3 style={{ borderBottom: '1px solid rgba(204, 153, 255, 1)' }}>Hi there</h3>
-                    <Markdown source={this.state.intro} />
-                    <h3 style={{ borderBottom: '1px solid rgba(204, 153, 255, 1)' }}>Summary</h3>
-                    <div className="mdl-grid mdl-cell mdl-cell--12-col">
-                        <div className="mdl-cell mdl-cell--2-col">
-                            <div>
-                                <h5 style={{ borderBottom: '1px solid rgba(204, 153, 255, 1)', display: 'inline-block' }}>Name</h5>
-                            </div>
-                            <p>Edward Owens</p>
-                        </div>
-                        <div className="mdl-cell mdl-cell--2-col">
-                            <div>
-                                <h5 style={{ borderBottom: '1px solid rgba(204, 153, 255, 1)', display: 'inline-block' }}>Age</h5>
-                            </div>
-                            <p>25</p>
-                        </div>
-                        <div className="mdl-cell mdl-cell--2-col">
-                            <div>
-                                <h5 style={{ borderBottom: '1px solid rgba(204, 153, 255, 1)', display: 'inline-block' }}>Location</h5>
-                            </div>
-                            <p>Los Angeles</p>
-                        </div>
-                        <div className="mdl-cell mdl-cell--2-col">
-                            <div>
-                                <h5 style={{ borderBottom: '1px solid rgba(204, 153, 255, 1)', display: 'inline-block' }}>Occupation</h5>
-                            </div>
-                            <p>Software Engineer</p>
-                        </div>
-                    </div>
+                <div className="mdl-cell mdl-cell-middle" >
+                    <LogoView style={{ width: '30%', borderRadius: 100, border: '3px solid rgba(204, 153, 255, 1)', display: 'block', margin: 'auto' }} />
                 </div>
                 <div className="mdl-layout-spacer"></div>
-            </div>
+                <div className="mdl-cell mdl-cell--12-col mdl-grid" style={{ justifyContent: 'center' }}>
+                    <div className="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--4dp" style={{ padding: 15 }} >
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">About me</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <Markdown source={this.state.aboutme} />
+                        </div>
+                    </div>
+                    <div className="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--4dp" style={{ padding: 15 }}>
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">This site</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <Markdown source={this.state.thissite} />
+                        </div>
+                    </div>
+                    <span className="mdl-chip mdl-chip--contact" style={{ marginRight: 15 }}>
+                        <span className="mdl-chip__contact mdl-color-text--white" style={{ backgroundColor: '#42ebf4' }}>Age</span>
+                        <span className="mdl-chip__text">25</span>
+                    </span>
+                    <span className="mdl-chip mdl-chip--contact" style={{ marginRight: 15 }}>
+                        <span className="mdl-chip__contact mdl-color-text--white" style={{ backgroundColor: '#f441f4' }}>Name</span>
+                        <span className="mdl-chip__text">Edward Owens</span>
+                    </span>
+                    <span className="mdl-chip mdl-chip--contact" style={{ marginRight: 15 }}>
+                        <span className="mdl-chip__contact mdl-color-text--white" style={{ backgroundColor: '#4ff441' }}>Area</span>
+                        <span className="mdl-chip__text">Los Angeles</span>
+                    </span>
+                    <span className="mdl-chip mdl-chip--contact" style={{ marginRight: 15 }}>
+                        <span className="mdl-chip__contact mdl-color-text--white" style={{ backgroundColor: '#f44141' }}>Job</span>
+                        <span className="mdl-chip__text">Software Engineer</span>
+                    </span>
+                </div>
+            </div >
         )
     }
 }

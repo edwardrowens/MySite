@@ -1,0 +1,1 @@
+I really like making stuff (like this website). It's an SPA built with React.js and Node.js (via Express). The site is currently containerized with Docker and running on Google Cloud Platform's Container Engine using [Kubernetes](https://kubernetes.io/). I also did all of the styling and design. This site is for all things Eddie. Have a look around!
