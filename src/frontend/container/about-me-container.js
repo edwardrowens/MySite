@@ -25,7 +25,7 @@ export default class AboutMeContainer extends React.Component {
 
     render() {
         return (
-            <div className="mdl-grid" style={{ justifyContent: 'center' }}>
+            <div className="mdl-grid" style={{ justifyContent: 'center', marginBottom: 30 }}>
                 <div className="mdl-cell-middle">
                     <h1 style={{ borderBottom: '3px solid rgba(204, 153, 255, .75)', display: 'block', margin: 'auto', textAlign: 'center', marginBottom: 50 }}>About me</h1>
                     <span className="mdl-chip mdl-chip--contact" style={{ marginRight: 15 }}>
