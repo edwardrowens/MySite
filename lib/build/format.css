@@ -49,3 +49,8 @@ li.slick-active .paging-link {
     padding: 0;
     margin: 0;
 }
+
+.wrapped-underlined {
+    border-bottom: 3px solid rgba(204, 153, 255, .75); 
+    display: inline-block;
+}
