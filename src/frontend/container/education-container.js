@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Title from '../view/container-title-view'
-import ExperienceCard from '../view/experience-view'
+import ExperienceCard from '../view/experience-card-view'
 import ContainerWrapper from '../view/container-wrapper-view'
 
 export default (props) => {

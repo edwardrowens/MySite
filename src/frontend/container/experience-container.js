@@ -2,7 +2,7 @@ import React from 'react'
 import Marked from 'react-markdown'
 import Axios from 'axios'
 
-import ExperienceView from '../view/experience-view'
+import ExperienceCard from '../view/experience-card-view'
 import Title from '../view/container-title-view'
 import Spacer from '../view/spacer-view'
 import ContainerWrapper from '../view/container-wrapper-view'
@@ -38,18 +38,18 @@ export default class ExperienceContainer extends React.Component {
                 <Title>Experience</Title>
                 <h4 className="wrapped-underlined">Current job</h4>
                 <div className=" mdl-grid" style={{ justifyContent: 'center' }}>
-                    <ExperienceView width={5} titleStyle={{ height: 140 }} background='/assets/gamblit.png' title="Gamblit Gaming" year={2016}>
+                    <ExperienceCard width={5} titleStyle={{ height: 140 }} background='/assets/gamblit.png' title="Gamblit Gaming" year={2016}>
                         <Marked source={this.state.gamblit_job_description} />
-                    </ExperienceView>
+                    </ExperienceCard>
                 </div>
                 <h4 className="wrapped-underlined">Previous jobs</h4>
                 <div className=" mdl-grid" style={{ justifyContent: 'center' }}>
-                    <ExperienceView titleStyle={{ height: 110 }} background='/assets/alfa.jpg' title="Alfa" year={2015}>
+                    <ExperienceCard titleStyle={{ height: 110 }} background='/assets/alfa.jpg' title="Alfa" year={2015}>
                         <Marked source={this.state.alfa_job_description} />
-                    </ExperienceView>
-                    <ExperienceView titleStyle={{ height: 180 }} background='/assets/mind_institute.jpg' title="MIND Institute" year={2014}>
+                    </ExperienceCard>
+                    <ExperienceCard titleStyle={{ height: 180 }} background='/assets/mind_institute.jpg' title="MIND Institute" year={2014}>
                         <Marked source={this.state.ucdmc_job_description} />
-                    </ExperienceView>
+                    </ExperienceCard>
                 </div>
             </ContainerWrapper>
         )
