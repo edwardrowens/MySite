@@ -46,16 +46,18 @@ export default class SlickCarousel extends React.Component {
             return <SlickCarouselItem key={UUID()}>{child}</SlickCarouselItem>
         })
         return (
-            <div className="mdl-grid" style={{ width: '100%' }}>
-                <SlickArrowView className="mdl-cell--middle mdl-layout--large-screen-only" onClick={this.prev} src='assets/left_arrow.png' />
-                <div className="mdl-layout-spacer mdl-layout--large-screen-only"></div>
-                <div className="mdl-cell--middle" style={{ width: this.state.width > 1025 ? '80%' : '100%' }}>
-                    <Slider {...this.props.settings} ref={c => this.slider = c}>
-                        {carouselItems}
-                    </Slider>
+            <div style={{ marginBottom: 80 }}>
+                <div className="mdl-grid" style={{ width: '100%' }}>
+                    <SlickArrowView className="mdl-cell--middle mdl-layout--large-screen-only" onClick={this.prev} src='assets/left_arrow.png' />
+                    <div className="mdl-layout-spacer mdl-layout--large-screen-only"></div>
+                    <div className="mdl-cell--middle" style={{ width: this.state.width > 1025 ? '80%' : '100%' }}>
+                        <Slider {...this.props.settings} ref={c => this.slider = c}>
+                            {carouselItems}
+                        </Slider>
+                    </div>
+                    <div className="mdl-layout-spacer mdl-layout--large-screen-only"></div>
+                    <SlickArrowView className="mdl-cell--middle mdl-layout--large-screen-only" onClick={this.next} src='assets/right_arrow.png' />
                 </div>
-                <div className="mdl-layout-spacer mdl-layout--large-screen-only"></div>
-                <SlickArrowView className="mdl-cell--middle mdl-layout--large-screen-only" onClick={this.next} src='assets/right_arrow.png' />
             </div>
         )
     }

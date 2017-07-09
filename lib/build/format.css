@@ -53,4 +53,5 @@ li.slick-active .paging-link {
 .wrapped-underlined {
     border-bottom: 3px solid rgba(204, 153, 255, .75); 
     display: inline-block;
+    margin-top: 5px;
 }
