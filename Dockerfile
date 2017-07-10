@@ -8,12 +8,16 @@ WORKDIR /usr/src/app
 COPY package.json /usr/src/app/
 RUN npm install
 
+# Grab configs
+COPY webpack.config.js /usr/src/app/
+COPY .babelrc /usr/src/app/
+
 # Bundle app source
 RUN mkdir -p /usr/src/app/src
 RUN mkdir -p /usr/src/app/lib
-RUN mkdir -p /usr/src/app/lib/build
+
 COPY ./src/ /usr/src/app/src
-COPY ./lib/build /usr/src/app/lib/build
+COPY ./lib/ /usr/src/app/lib
 
 EXPOSE 8000
 CMD [ "npm", "start" ]
