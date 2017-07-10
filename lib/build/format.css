@@ -55,3 +55,19 @@ li.slick-active .paging-link {
     display: inline-block;
     margin-top: 5px;
 }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } 
+}
+
+.Typist .Cursor {
+  display: inline-block; 
+}
+  .Typist .Cursor--blinking {
+    opacity: 1;
+    animation: blink 1s linear infinite; }

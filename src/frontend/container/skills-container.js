@@ -35,11 +35,11 @@ export default (props) => {
                 </SkillCard>
                 <SkillCard title="Dev Utilities">
                     <SkillList>
+                        <Skill name='Git' rating={3} />
+                        <Skill name='Maven' rating={3} />
                         <Skill name='Kubernetes' rating={2} />
                         <Skill name='Google Cloud Platform' rating={2} />
                         <Skill name='Docker' rating={2} />
-                        <Skill name='Maven' rating={3} />
-                        <Skill name='Git' rating={3} />
                         <Skill name='Gradle' rating={1} />
                     </SkillList>
                 </SkillCard>
@@ -49,12 +49,12 @@ export default (props) => {
                         <Skill name='N-tier' rating={5} />
                         <Skill name='Command Pattern' rating={5} />
                         <Skill name='Dependency Injection' rating={4} />
-                        <Skill name='Networking' rating={3} />
-                        <Skill name='Game Development' rating={2} />
                         <Skill name='Factory Pattern' rating={4} />
+                        <Skill name='Event Driven' rating={4} />
                         <Skill name='Multithreading and Concurrency' rating={3} />
                         <Skill name='Algorithms' rating={3} />
-                        <Skill name='Event Driven' rating={4} />
+                        <Skill name='Networking' rating={3} />
+                        <Skill name='Game Development' rating={2} />
                     </SkillList>
                 </SkillCard>
             </div>
