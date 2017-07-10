@@ -14,7 +14,13 @@ class Application extends React.Component {
     constructor(props) {
         super(props)
 
+        this.state = {
+            initialHash: "#home"
+        }
+
         this.customPage = this.customPage.bind(this)
+        this.updateUrl = this.updateUrl.bind(this)
+        this.setState = this.setState.bind(this)
 
         // React slick does not work with custom paging being react components
         this.customPaging = [
@@ -34,7 +40,59 @@ class Application extends React.Component {
             speed: 500,
             dots: true,
             adaptiveHeight: true,
-            arrows: false
+            arrows: false,
+            touchThreshold: 100,
+            beforeChange: (currentSlide, nextSlide) => {
+                switch (nextSlide) {
+                    case 0:
+                        this.updateUrl("#home")
+                        break
+                    case 1:
+                        this.updateUrl("#aboutme")
+                        break
+                    case 2:
+                        this.updateUrl("#education")
+                        break
+                    case 3:
+                        this.updateUrl("#experience")
+                        break
+                    case 4:
+                        this.updateUrl("#skills")
+                        break
+                    case 5:
+                        this.updateUrl("#contact")
+                        break
+                }
+            }
+        }
+    }
+
+    componentDidMount() {
+        let startingHash = location.hash ? location.hash : this.state.initialHash
+        switch (startingHash) {
+            case "#aboutme":
+                this.carousel.goTo(1)
+                break
+            case "#education":
+                this.carousel.goTo(2)
+                break
+            case "#experience":
+                this.carousel.goTo(3)
+                break
+            case "#skill":
+                this.carousel.goTo(4)
+                break
+            case "#contact":
+                this.carousel.goTo(5)
+                break
+        }
+    }
+
+    updateUrl(hash) {
+        if (history.pushState) {
+            history.replaceState({}, '', hash)
+        } else {
+            location.hash = hash
         }
     }
 
@@ -46,7 +104,7 @@ class Application extends React.Component {
         return (
             <div className="mdl-layout mdl-js-layout" >
                 <div className="mdl-layout-spacer mdl-layout--large-screen-only" ></div>
-                <SlickCarousel settings={this.carouselSettings}>
+                <SlickCarousel ref={c => this.carousel = c} settings={this.carouselSettings} goTo={this.hashGoTo}>
                     <HomeContainer />
                     <AboutMeContainer />
                     <EducationContainer />

@@ -11,16 +11,19 @@ export default class SlickCarousel extends React.Component {
 
         this.state = {
             width: 0,
-            height: 0
+            height: 0,
+            index: 0
         }
 
         this.next = this.next.bind(this)
         this.prev = this.prev.bind(this)
+        this.goTo = this.goTo.bind(this)
         this.setState = this.setState.bind(this)
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this)
     }
 
     componentDidMount() {
+        console.log("mounted!")
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions);
     }
@@ -39,6 +42,10 @@ export default class SlickCarousel extends React.Component {
 
     prev() {
         this.slider.slickPrev()
+    }
+
+    goTo(i) {
+        this.slider.slickGoTo(i)
     }
 
     render() {
