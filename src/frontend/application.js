@@ -14,13 +14,12 @@ class Application extends React.Component {
     constructor(props) {
         super(props)
 
-        this.state = {
-            initialHash: "#home"
-        }
-
         this.customPage = this.customPage.bind(this)
         this.updateUrl = this.updateUrl.bind(this)
         this.setState = this.setState.bind(this)
+        this.afterSlideChange = this.afterSlideChange.bind(this)
+        this.beforeSlideChange = this.beforeSlideChange.bind(this)
+        this.forceUpdate = this.forceUpdate.bind(this)
 
         // React slick does not work with custom paging being react components
         this.customPaging = [
@@ -42,28 +41,22 @@ class Application extends React.Component {
             adaptiveHeight: true,
             arrows: false,
             touchThreshold: 100,
-            beforeChange: (currentSlide, nextSlide) => {
-                switch (nextSlide) {
-                    case 0:
-                        this.updateUrl("#home")
-                        break
-                    case 1:
-                        this.updateUrl("#aboutme")
-                        break
-                    case 2:
-                        this.updateUrl("#education")
-                        break
-                    case 3:
-                        this.updateUrl("#experience")
-                        break
-                    case 4:
-                        this.updateUrl("#skills")
-                        break
-                    case 5:
-                        this.updateUrl("#contact")
-                        break
-                }
-            }
+            beforeChange: this.beforeSlideChange,
+            afterChange: this.afterSlideChange
+        }
+
+        this.backgroundColors = [
+            '#ffffff', // home
+            '#ffffff', // about me
+            '#ffffff', // education
+            '#ffffff', // experience
+            '#000000', // skills
+            '#ffffff' // contact
+        ]
+
+        this.state = {
+            initialHash: "#home",
+            backgroundColor: this.backgroundColors[0]
         }
     }
 
@@ -81,6 +74,8 @@ class Application extends React.Component {
                 break
             case "#skill":
                 this.carousel.goTo(4)
+                // re render so React Typist works again
+                this.forceUpdate()
                 break
             case "#contact":
                 this.carousel.goTo(5)
@@ -100,9 +95,39 @@ class Application extends React.Component {
         return this.customPaging[i]
     }
 
+    beforeSlideChange(currentSlideIndex, nextSlideIndex) {
+        switch (nextSlideIndex) {
+            case 0:
+                this.updateUrl("#home")
+                break
+            case 1:
+                this.updateUrl("#aboutme")
+                break
+            case 2:
+                this.updateUrl("#education")
+                break
+            case 3:
+                this.updateUrl("#experience")
+                break
+            case 4:
+                this.updateUrl("#skills")
+                break
+            case 5:
+                this.updateUrl("#contact")
+                break
+        }
+    }
+
+    afterSlideChange(currentSlideIndex) {
+        // Re render so the typist animation triggers
+        if (currentSlideIndex === 4) {
+            this.forceUpdate()
+        }
+    }
+
     render() {
         return (
-            <div className="mdl-layout mdl-js-layout" >
+            <div className="mdl-layout mdl-js-layout" style={{ backgroundColor: '#f2f2f2' }} >
                 <div className="mdl-layout-spacer mdl-layout--large-screen-only" ></div>
                 <SlickCarousel ref={c => this.carousel = c} settings={this.carouselSettings} goTo={this.hashGoTo}>
                     <HomeContainer />

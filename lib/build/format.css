@@ -9,7 +9,7 @@
 }
 
 .paging-link {
-    color: rgba(204, 153, 255, .35);
+    color: rgba(204, 153, 255, .5);
     transition: all 200ms ease-in-out
 }
 
@@ -36,6 +36,7 @@ li.slick-active .paging-link {
     white-space: nowrap;
 }
 
+/*Random MDL stuff that I don't like the look of*/
 .mdl-chip__text {
     font-size: 17px;
 }
@@ -49,12 +50,20 @@ li.slick-active .paging-link {
     margin: 0;
 }
 
-.wrapped-underlined {
-    border-bottom: 3px solid rgba(204, 153, 255, .75);
-    display: inline-block;
-    margin-top: 5px;
+/*Styling for MDL blockquotes*/
+blockquote {
+    margin-top: 10px;
 }
 
+blockquote:after {
+    content: none;
+}
+
+blockquote::before {
+    content: none;
+}
+
+/*Typist stuff*/
 @keyframes blink {
     0% {
         opacity: 1;
@@ -76,6 +85,7 @@ li.slick-active .paging-link {
     animation: blink 1s linear infinite;
 }
 
+/*My stuff*/
 .hover-expand:hover {
     width: 64px;
     height: 64px;
@@ -84,4 +94,10 @@ li.slick-active .paging-link {
 .hover-expand {
     width: 56px;
     height: 56px;
+}
+
+.wrapped-underlined {
+    border-bottom: 3px solid rgba(204, 153, 255, .75);
+    display: inline-block;
+    margin-top: 5px;
 }

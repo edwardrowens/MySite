@@ -8,8 +8,8 @@ import SkillList from '../view/skill-list-view'
 
 export default (props) => {
     return (
-        <ContainerWrapper>
-            <Title>Skills</Title>
+        <ContainerWrapper backgroundColor="#000000">
+            <Title color="#1ec503" >Skills</Title>
             <div className="mdl-grid">
                 <SkillCard title="Languages">
                     <SkillList>

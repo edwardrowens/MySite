@@ -12,7 +12,7 @@ export default (props) => {
     return (
         <li className="mdl-list__item" style={{ padding: 0 }}>
             <span className="mdl-list__item-primary-content">
-                <span style={{ display: 'inline-block', maxWidth: 125 }}>{props.name}</span>
+                <span style={{ display: 'inline-block', maxWidth: 125, color: '#1ec503' }}>{props.name}</span>
                 <Spacer style={{ display: 'inline-block' }} />
                 <span className="mdl-cell--middle" style={{ display: 'inline-block' }}>
                     {rating}
