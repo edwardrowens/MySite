@@ -1,10 +1,17 @@
 apiVersion: v1
-kind: Pod
+kind: Deployment
 metadata:
   name: my-site
-spec:  # specification of the pod's contents
-  containers:
-  - name: my-site
-    image: "edwardrowens/mysite:latest"
-    ports:
-    - containerPort: 8000
+  labels:
+    k8s-app: default-http-backend
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        k8s-app: default-http-backend
+    containers:
+    - name: default-http-backend
+      image: edwardrowens/mysite:latest
+      ports:
+      - containerPort: 8000

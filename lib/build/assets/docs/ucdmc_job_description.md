@@ -1,0 +1,1 @@
+Utilized applied mathematical techniques (i.e. graph theory) to investigate functional connectivity between regions of interest in the brain.

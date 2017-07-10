@@ -1,0 +1,1 @@
+Aided in developing, maintaining, and testing a large scale, OS agnostic, and efficient web app in the asset finance industry used by multiple clients internationally to service portfolios ranging from one to millions of contracts. I accomplished this task utilizing Java and test driven development
