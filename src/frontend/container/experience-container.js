@@ -4,6 +4,7 @@ import Axios from 'axios'
 
 import ExperienceCard from '../view/experience-card-view'
 import Title from '../view/container-title-view'
+import SmallTitle from '../view/container-small-title-view'
 import Spacer from '../view/spacer-view'
 import ContainerWrapper from '../view/container-wrapper-view'
 
@@ -36,13 +37,13 @@ export default class ExperienceContainer extends React.Component {
         return (
             <ContainerWrapper>
                 <Title>Experience</Title>
-                <h4 className="wrapped-underlined">Current job</h4>
+                <SmallTitle>Current job</SmallTitle>
                 <div className=" mdl-grid" style={{ justifyContent: 'center' }}>
                     <ExperienceCard width={5} titleStyle={{ height: 140 }} background='/assets/gamblit.png' title="Gamblit Gaming" year={2016}>
                         <Marked source={this.state.gamblit_job_description} />
                     </ExperienceCard>
                 </div>
-                <h4 className="wrapped-underlined">Previous jobs</h4>
+                <SmallTitle>Previous jobs</SmallTitle>
                 <div className=" mdl-grid" style={{ justifyContent: 'center' }}>
                     <ExperienceCard titleStyle={{ height: 110 }} background='/assets/alfa.jpg' title="Alfa" year={2015}>
                         <Marked source={this.state.alfa_job_description} />

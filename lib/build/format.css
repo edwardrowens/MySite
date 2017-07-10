@@ -1,8 +1,5 @@
-.overflow {
-    overflow: auto
-}
-
 /*Styling for the custom paging*/
+
 .slick-dots li {
     margin-right: 15px;
 }
@@ -20,7 +17,9 @@ li.slick-active .paging-link {
     color: rgba(204, 153, 255, 1);
 }
 
+
 /*Styling to make the chips bigger*/
+
 .mdl-chip__contact {
     height: 48px;
     width: 48px;
@@ -31,7 +30,7 @@ li.slick-active .paging-link {
 
 .mdl-chip {
     height: 48px;
-    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     line-height: 48px;
     border-radius: 24px;
     white-space: nowrap;
@@ -51,23 +50,38 @@ li.slick-active .paging-link {
 }
 
 .wrapped-underlined {
-    border-bottom: 3px solid rgba(204, 153, 255, .75); 
+    border-bottom: 3px solid rgba(204, 153, 255, .75);
     display: inline-block;
     margin-top: 5px;
 }
 
 @keyframes blink {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } 
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .Typist .Cursor {
-  display: inline-block; 
+    display: inline-block;
 }
-  .Typist .Cursor--blinking {
+
+.Typist .Cursor--blinking {
     opacity: 1;
-    animation: blink 1s linear infinite; }
+    animation: blink 1s linear infinite;
+}
+
+.hover-expand:hover {
+    width: 64px;
+    height: 64px;
+}
+
+.hover-expand {
+    width: 56px;
+    height: 56px;
+}
