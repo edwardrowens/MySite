@@ -11,7 +11,7 @@ export default (props) => {
                     </Typist>
                 </h2>
             </div>
-            <div className="mdl-card__supporting-text">
+            <div className="mdl-card__supporting-text" style={{ minWidth: 230 }}>
                 {props.children}
             </div>
         </div >
