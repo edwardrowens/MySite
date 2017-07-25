@@ -75,7 +75,7 @@ class Application extends React.Component {
             case "#skill":
                 this.carousel.goTo(4)
                 // re render so React Typist works again
-                this.forceUpdate()
+                // this.forceUpdate()
                 break
             case "#contact":
                 this.carousel.goTo(5)
