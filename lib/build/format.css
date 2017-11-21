@@ -1,91 +1,75 @@
-/*Styling for the custom paging*/
-
-.slick-dots li {
-    margin-right: 15px;
+body {
+    font-family: 'Spectral SC', serif;
 }
 
-.paging-link:hover {
-    color: rgba(204, 153, 255, 1);
-}
-
-.paging-link {
-    color: rgba(204, 153, 255, .5);
-    transition: all 200ms ease-in-out
-}
-
-li.slick-active .paging-link {
-    color: rgba(204, 153, 255, 1);
-}
-
-
-/*Styling to make the chips bigger*/
-
-.mdl-chip__contact {
-    height: 48px;
-    width: 48px;
-    border-radius: 24px;
-    font-size: 17px;
-    line-height: 48px;
-}
-
-.mdl-chip {
-    height: 48px;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    line-height: 48px;
-    border-radius: 24px;
-    white-space: nowrap;
-}
-
-/*Random MDL stuff that I don't like the look of*/
-.mdl-chip__text {
-    font-size: 17px;
-}
-
-.mdl-card__supporting-text {
-    color: #262626;
-}
-
-.mdl-grid {
-    padding: 0;
+.jumbotron {
+    min-height: 100vh;
+    position: relative;
+    background: none;
     margin: 0;
+    border-radius: 0;
 }
 
-/*Styling for MDL blockquotes*/
-blockquote {
-    margin-top: 10px;
+.vertical-center {
+    display: flex;
+    align-items: center;
 }
 
-blockquote:after {
-    content: none;
+.jumbotron .blurred-intro-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(assets/background.png);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    z-index: -1;
+    overflow: hidden;
 }
 
-blockquote::before {
-    content: none;
+.center {
+    text-align: center;
 }
 
-/*Typist stuff*/
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.centered {
+    margin: 0 auto;
 }
 
-.Typist .Cursor {
-    display: inline-block;
+.logo {
+    width: 20%;
+    min-width: 215px;
+    max-width: 250px;
+    height: auto;
+    border-radius: 100%;
+    border: 2px solid black;
+    margin-bottom: 10px;
 }
 
-.Typist .Cursor--blinking {
-    opacity: 1;
-    animation: blink 1s linear infinite;
+.subtitle {
+    border-bottom: 1px solid black;
 }
 
-/*My stuff*/
+.thumbnail {
+    margin-top: 15px;
+    min-width: 100px;
+    min-height: 100px;
+    width: 15%;
+    height: 15%;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.icon {
+    font-size: 7em;
+}
+
 .hover-expand:hover {
     width: 64px;
     height: 64px;
@@ -94,10 +78,4 @@ blockquote::before {
 .hover-expand {
     width: 56px;
     height: 56px;
-}
-
-.wrapped-underlined {
-    border-bottom: 3px solid rgba(204, 153, 255, .75);
-    display: inline-block;
-    margin-top: 5px;
 }

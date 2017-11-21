@@ -50,3 +50,5 @@ node_modules/
 *.log
 lib/build/*.js
 .kube/
+*.iml
+.idea/
