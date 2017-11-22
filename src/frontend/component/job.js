@@ -7,7 +7,7 @@ const Job = (props) => {
   return (
     <div className='row' style={{marginTop: 20}}>
       <div className='col-xl'>
-        <div className='row centered' style={{width: '85%', paddingBottom: 10}}>
+        <div className='row centered' style={{paddingBottom: 10}}>
           <img src={props.logo} className='rounded thumbnail centered' style={props.logoStyle}/>
           <div className='col-xl'>
             <h3 style={{marginBottom: 0}}>{props.title}</h3>
@@ -28,6 +28,7 @@ Job.propTypes = {
   logo: PropTypes.string.isRequired,
   jobTitle: PropTypes.string.isRequired,
   logoStyle: PropTypes.object,
+  width: PropTypes.string.isRequired,
 };
 
 export default Job;

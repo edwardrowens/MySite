@@ -1,7 +1,7 @@
 import React from 'react';
 import Sensor from 'react-visibility-sensor';
 
-import Job from './job';
+import Job from './responsive-job';
 
 const ExperienceComponent = (props) => {
   return (

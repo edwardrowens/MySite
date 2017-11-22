@@ -67,15 +67,15 @@ body {
 }
 
 .icon {
-    font-size: 7em;
+    font-size: 5em;
+    color:#DFDCE3;
 }
 
-.hover-expand:hover {
-    width: 64px;
-    height: 64px;
+.icon:hover {
+    color: #c8c6cc;
 }
 
-.hover-expand {
-    width: 56px;
-    height: 56px;
+.contact-image {
+    background-image: url("assets/contact-background.png");
+    background-size: cover;
 }
