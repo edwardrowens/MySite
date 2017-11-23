@@ -28,6 +28,7 @@
     "react-waypoint": "^7.3.1",
     "scroll-to-element": "^2.0.0",
     "serve-favicon": "^2.4.3",
+    "tinycolor": "0.0.1",
     "tinygradient": "^0.3.1",
     "uuid": "^3.0.1",
     "webpack": "^2.6.1"
