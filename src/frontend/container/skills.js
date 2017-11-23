@@ -5,7 +5,7 @@ import SkillsComponent from "../component/skills";
 class Skills extends Component {
   render() {
     return (
-      <SkillsComponent/>
+      <SkillsComponent id='skills'/>
     );
   }
 }

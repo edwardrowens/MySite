@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Waypoint from 'react-waypoint';
 
 import ContactIcon from './contact-icon';
@@ -8,9 +9,9 @@ const ContactComponent = (props) => {
     <Waypoint
       topOffset={'45%'}
       bottomOffset={'45%'}
-      onEnter={(waypoint) => props.onVisibilityChange(waypoint.currentPosition === Waypoint.inside)}
+      onEnter={(waypoint) => props.onEnter(waypoint.currentPosition === Waypoint.inside)}
     >
-      <div className='jumbotron contact-image' id={props.id}>
+      <div className='jumbotron contact-image'>
         <h1 className='text-center'>Contact</h1>
         <div className='container'>
           <div className='row'>
@@ -25,6 +26,12 @@ const ContactComponent = (props) => {
       </div>
     </Waypoint>
   )
+};
+
+ContactComponent.propTypes = {
+  onEnter: PropTypes.func,
+  animate: PropTypes.bool,
+  id: PropTypes.string,
 };
 
 export default ContactComponent;

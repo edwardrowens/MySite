@@ -1,5 +1,9 @@
 body {
-    font-family: 'Spectral SC', serif;
+    font-family: 'Roboto', serif;
+}
+
+#root {
+    overflow: hidden;
 }
 
 .jumbotron {
@@ -68,7 +72,7 @@ body {
 
 .icon {
     font-size: 5em;
-    color:#DFDCE3;
+    color: #DFDCE3;
 }
 
 .icon:hover {
@@ -78,4 +82,10 @@ body {
 .contact-image {
     background-image: url("assets/contact-background.png");
     background-size: cover;
+}
+
+/*Rating styling*/
+.transform-90 {
+    transform: rotate(-90deg);
+    transform-origin: center;
 }

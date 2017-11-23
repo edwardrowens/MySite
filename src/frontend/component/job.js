@@ -28,7 +28,6 @@ Job.propTypes = {
   logo: PropTypes.string.isRequired,
   jobTitle: PropTypes.string.isRequired,
   logoStyle: PropTypes.object,
-  width: PropTypes.string.isRequired,
 };
 
 export default Job;

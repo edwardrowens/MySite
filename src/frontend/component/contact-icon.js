@@ -4,6 +4,7 @@ import FadeIn from 'react-fade-in';
 
 const iconTextStyle = {
   marginLeft: 20,
+  fontSize: '.95em'
 };
 
 const ContactIconComponent = (props) => {

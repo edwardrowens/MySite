@@ -1,22 +1,24 @@
 import React, {Component} from 'react';
-import scrollToElement from 'scroll-to-element';
+import autobind from 'autobind-decorator';
 
 import IntroComponent from '../component/intro';
 
 class IntroContainer extends Component {
-
-  onVisibilityChange(isVisible) {
-    if (isVisible) {
-      scrollToElement('#intro', {
-        duration: 500,
-        ease: 'linear',
-      });
+  constructor(props) {
+    super(props);
+    this.state = {
+      animate: false,
     }
+  }
+
+  @autobind
+  onEnter() {
+    setTimeout(()=>this.setState({animate: true}), 500);
   }
 
   render() {
     return (
-      <IntroComponent id='intro' onVisibilityChange={this.onVisibilityChange}/>
+      <IntroComponent onEnter={this.onEnter} animate={this.state.animate}/>
     )
   }
 }
