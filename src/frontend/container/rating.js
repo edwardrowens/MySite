@@ -16,8 +16,8 @@ class Rating extends Component {
   render() {
     let radius = 50;
     let circumference = 2 * Math.PI * radius;
-    let strokeLength = (circumference / 100) * this.props.rating;
-    let barColorIndex = Math.floor(this.props.rating / 10) - 1;
+    let strokeLength = (circumference / 100) * ((this.props.rating / this.props.outOf) * 100);
+    let barColorIndex = Math.floor((this.props.rating * this.props.outOf) / this.props.outOf) - 1;
     return (
       <RatingComponent
         width={120}
@@ -26,7 +26,7 @@ class Rating extends Component {
         backgroundColor='#efefef'
         strokeDashArray={`${strokeLength}, ${circumference}`}
         radius={radius}
-        rating={`${this.props.rating }%`}
+        rating={''+this.props.rating}
         className={this.props.className}
       />
     )
@@ -35,6 +35,7 @@ class Rating extends Component {
 
 Rating.propTypes = {
   rating: PropTypes.number.isRequired,
+  outOf: PropTypes.number.isRequired,
   className: PropTypes.string,
 };
 

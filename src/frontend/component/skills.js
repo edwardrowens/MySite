@@ -11,43 +11,43 @@ const SkillsComponent = (props) => {
       <div className='container'>
         <SkillSet title='Languages'>
           <SkillGroup>
-            <Skill name='Java' rating={90}/>
-            <Skill name='Android' rating={60}/>
-            <Skill name='C++' rating={50}/>
-            <Skill name='SQL' rating={50}/>
-            <Skill name='JavaScript' rating={70}/>
-            <Skill name='HTML/CSS' rating={50}/>
+            <Skill name='Java' rating={9}/>
+            <Skill name='JavaScript' rating={7}/>
+            <Skill name='Android' rating={6}/>
+            <Skill name='C++' rating={5}/>
+            <Skill name='SQL' rating={5}/>
+            <Skill name='HTML/CSS' rating={5}/>
           </SkillGroup>
         </SkillSet>
         <SkillSet title='Tools'>
           <SkillGroup>
-            <Skill name='Spring' rating={80}/>
-            <Skill name='React Native' rating={60}/>
-            <Skill name='React' rating={70}/>
-            <Skill name='Redux' rating={50}/>
-            <Skill name='Redis' rating={50}/>
-            <Skill name='RabbitMQ' rating={50}/>
-            <Skill name='JUnit' rating={100}/>
-            <Skill name='Mockito' rating={100}/>
+            <Skill name='JUnit' rating={10}/>
+            <Skill name='Mockito' rating={10}/>
+            <Skill name='Spring' rating={8}/>
+            <Skill name='React' rating={7}/>
+            <Skill name='React Native' rating={6}/>
+            <Skill name='Redux' rating={5}/>
+            <Skill name='Redis' rating={5}/>
+            <Skill name='RabbitMQ' rating={5}/>
           </SkillGroup>
         </SkillSet>
         <SkillSet title='Databases'>
           <SkillGroup>
-            <Skill name='MySQL' rating={80}/>
-            <Skill name='PostgreSQL' rating={60}/>
-            <Skill name='BigQuery' rating={50}/>
-            <Skill name='Elasticsearch' rating={40}/>
-            <Skill name='MongoDB' rating={30}/>
+            <Skill name='MySQL' rating={8}/>
+            <Skill name='PostgreSQL' rating={6}/>
+            <Skill name='BigQuery' rating={5}/>
+            <Skill name='Elasticsearch' rating={4}/>
+            <Skill name='MongoDB' rating={3}/>
           </SkillGroup>
         </SkillSet>
         <SkillSet title='Deployment'>
           <SkillGroup>
-            <Skill name='Git' rating={80}/>
-            <Skill name='Maven' rating={90}/>
-            <Skill name='Kubernetes' rating={40}/>
-            <Skill name='Docker' rating={50}/>
-            <Skill name='GCP' rating={60}/>
-            <Skill name='AWS' rating={70}/>
+            <Skill name='Maven' rating={9}/>
+            <Skill name='Git' rating={8}/>
+            <Skill name='AWS' rating={7}/>
+            <Skill name='GCP' rating={6}/>
+            <Skill name='Docker' rating={5}/>
+            <Skill name='Kubernetes' rating={4}/>
           </SkillGroup>
         </SkillSet>
       </div>

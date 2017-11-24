@@ -7,7 +7,7 @@ const Skill = (props) => {
   return (
     <div className='col center'>
       <h5 >{props.name}</h5>
-      <Rating rating={props.rating}/>
+      <Rating rating={props.rating} outOf={10}/>
     </div>
   )
 };

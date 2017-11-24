@@ -14,7 +14,6 @@ class SkillSet extends Component {
 
   @autobind
   onEnter(isVisible) {
-    console.log(isVisible)
     if (isVisible) {
       this.setState({fadeIn: true});
     }
