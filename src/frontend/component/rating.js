@@ -14,7 +14,7 @@ const Rating = (props) => {
           <animate attributeType="CSS" attributeName="stroke-dasharray" from={`0, ${2 * Math.PI * props.radius}`}
                    to={props.strokeDashArray} dur="1s"/>
         </circle>
-        <text x="50%" y="50%" textAnchor="middle" strokeWidth="2px" dy=".3em">{props.rating}</text>
+        <text x="50%" y="50%" textAnchor="middle" strokeWidth="2px" dy=".3em" fill={props.barColor}>{props.rating}</text>
       </svg>
     </div>
   )

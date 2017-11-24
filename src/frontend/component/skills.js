@@ -15,7 +15,7 @@ const SkillsComponent = (props) => {
             <Skill name='Android' rating={60}/>
             <Skill name='C++' rating={50}/>
             <Skill name='SQL' rating={50}/>
-            <Skill name='JavaScript' rating={100}/>
+            <Skill name='JavaScript' rating={70}/>
             <Skill name='HTML/CSS' rating={50}/>
           </SkillGroup>
         </SkillSet>
