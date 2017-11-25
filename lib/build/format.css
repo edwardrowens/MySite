@@ -14,6 +14,11 @@ body {
     border-radius: 0;
 }
 
+.list-group-item {
+    padding: 5px;
+    border: 0;
+}
+
 .vertical-center {
     display: flex;
     align-items: center;
@@ -48,11 +53,10 @@ body {
 
 .logo {
     width: 20%;
-    min-width: 215px;
-    max-width: 250px;
+    min-width: 250px;
+    max-width: 400px;
     height: auto;
-    border-radius: 100%;
-    border: 2px solid black;
+    border-radius: 5px;
     margin-bottom: 10px;
 }
 
@@ -77,6 +81,10 @@ body {
 
 .icon:hover {
     color: #c8c6cc;
+}
+
+a:hover {
+    border: 0;
 }
 
 .contact-image {

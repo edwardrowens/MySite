@@ -5,7 +5,7 @@ import Rating from '../container/rating';
 
 const Skill = (props) => {
   return (
-    <div className='col center'>
+    <div className='col-6 col-md-4 col-lg-3 center'>
       <h5 >{props.name}</h5>
       <Rating rating={props.rating} outOf={10}/>
     </div>

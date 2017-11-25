@@ -13,7 +13,7 @@ const ContactIconComponent = (props) => {
       <div className='col'>
         <FadeIn>
           <div className='row' style={{minWidth: 315}}>
-            <a target="_blank" className={`${props.icon} icon`} href={props.href}/>
+            <a target="_blank" className={`icon`} href={props.href}><i className={`fa ${props.icon}`}/></a>
             <p className='vertical-center' style={iconTextStyle}>{props.text}</p>
           </div>
         </FadeIn>

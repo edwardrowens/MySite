@@ -7,7 +7,7 @@ const Intro = (props) => {
   let text = null;
   if (props.animate) {
     text = <FadeIn>
-      <h1 style={{color: '#ffffff'}}>Edward Owens</h1>
+      <h1 style={{color: '#ffffff', fontSize: '2em'}}>Edward Owens</h1>
       <h2 style={{color: '#ffffff'}}>Software Engineer</h2>
     </FadeIn>
   }

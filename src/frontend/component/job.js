@@ -11,8 +11,8 @@ const Job = (props) => {
           <img src={props.logo} className='rounded thumbnail centered' style={props.logoStyle}/>
           <div className='col-xl'>
             <h3 style={{marginBottom: 0}}>{props.title}</h3>
-            <p style={{fontStyle: 'italics', marginBottom: 0}}>{props.jobTitle}</p>
-            <p style={{fontStyle: 'italics'}}>{props.date}</p>
+            <p style={{fontStyle: 'italic', marginBottom: 0}}>{props.jobTitle}</p>
+            <p style={{fontStyle: 'italic'}}>{props.date}</p>
             <Markdown uri={props.description}/>
           </div>
         </div>
