@@ -1,103 +1,99 @@
-/*Styling for the custom paging*/
-
-.slick-dots li {
-    margin-right: 15px;
+body {
+    font-family: 'Roboto', serif;
 }
 
-.paging-link:hover {
-    color: rgba(204, 153, 255, 1);
+#root {
+    overflow: hidden;
 }
 
-.paging-link {
-    color: rgba(204, 153, 255, .5);
-    transition: all 200ms ease-in-out
-}
-
-li.slick-active .paging-link {
-    color: rgba(204, 153, 255, 1);
-}
-
-
-/*Styling to make the chips bigger*/
-
-.mdl-chip__contact {
-    height: 48px;
-    width: 48px;
-    border-radius: 24px;
-    font-size: 17px;
-    line-height: 48px;
-}
-
-.mdl-chip {
-    height: 48px;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    line-height: 48px;
-    border-radius: 24px;
-    white-space: nowrap;
-}
-
-/*Random MDL stuff that I don't like the look of*/
-.mdl-chip__text {
-    font-size: 17px;
-}
-
-.mdl-card__supporting-text {
-    color: #262626;
-}
-
-.mdl-grid {
-    padding: 0;
+.jumbotron {
+    min-height: 100vh;
+    position: relative;
+    background: none;
     margin: 0;
+    border-radius: 0;
 }
 
-/*Styling for MDL blockquotes*/
-blockquote {
-    margin-top: 10px;
+.list-group-item {
+    padding: 5px;
+    border: 0;
 }
 
-blockquote:after {
-    content: none;
+.vertical-center {
+    display: flex;
+    align-items: center;
 }
 
-blockquote::before {
-    content: none;
+.jumbotron .blurred-intro-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(assets/background.png);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    z-index: -1;
+    overflow: hidden;
 }
 
-/*Typist stuff*/
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.center {
+    text-align: center;
 }
 
-.Typist .Cursor {
-    display: inline-block;
+.centered {
+    margin: 0 auto;
 }
 
-.Typist .Cursor--blinking {
-    opacity: 1;
-    animation: blink 1s linear infinite;
+.logo {
+    width: 20%;
+    min-width: 250px;
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-/*My stuff*/
-.hover-expand:hover {
-    width: 64px;
-    height: 64px;
+.subtitle {
+    border-bottom: 1px solid black;
 }
 
-.hover-expand {
-    width: 56px;
-    height: 56px;
+.thumbnail {
+    margin-top: 15px;
+    min-width: 100px;
+    min-height: 100px;
+    width: 15%;
+    height: 15%;
+    max-width: 200px;
+    max-height: 200px;
 }
 
-.wrapped-underlined {
-    border-bottom: 3px solid rgba(204, 153, 255, .75);
-    display: inline-block;
-    margin-top: 5px;
+.icon {
+    font-size: 5em;
+    color: #DFDCE3;
+}
+
+.icon:hover {
+    color: #c8c6cc;
+}
+
+a:hover {
+    border: 0;
+}
+
+.contact-image {
+    background-image: url("assets/contact-background.png");
+    background-size: cover;
+}
+
+/*Rating styling*/
+.transform-90 {
+    transform: rotate(-90deg);
+    transform-origin: center;
 }
