@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import autobind from 'autobind-decorator';
 
-import ItemComponent from '../component/item';
+import SummaryComponent from '../component/summary';
 
-class Item extends Component {
+class Summary extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,16 +21,19 @@ class Item extends Component {
 
   render() {
     return (
-      <ItemComponent {...this.props} fadeIn={this.state.fadeIn} onEnter={this.onEnter}/>
+      <SummaryComponent {...this.props} fadeIn={this.state.fadeIn} onEnter={this.onEnter}/>
     )
   }
 }
 
-Item.propTypes = {
+Summary.propTypes = {
   title: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   color: PropTypes.string,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]).isRequired,
 };
 
-export default Item;
+export default Summary;

@@ -3,24 +3,23 @@ import PropTypes from 'prop-types';
 import FadeIn from 'react-fade-in';
 import Waypoint from 'react-waypoint';
 
-const Item = (props) => {
+const Summary = (props) => {
   let component = null;
   if (props.fadeIn) {
     component = (
-      <div className='col-lg-6 col-md-6 col-xs-12 text-center' style={{marginBottom: 30}}>
-        <div style={{display: 'inline-block', width: '50%', padding: 10, borderRadius: 20}}>
-          <FadeIn>
-            <div style={{color: props.color, fontSize: '2em'}} className={`fa ${props.icon}`}/>
+      <div className='col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xl-4 text-center' style={{marginBottom: 30}}>
+        <FadeIn>
+          <div style={{color: props.color, fontSize: '2em'}} className={`fa ${props.icon}`}/>
+          <div style={{display:'inline-block'}}>
             <p style={{
-              marginBottom: 5,
-              marginLeft: 8,
               fontSize: '1.5em',
               color: '#89bdd3',
-              borderBottom: '1px solid rgb(137,189,211)'
+              borderBottom: '1px solid rgb(137,189,211)',
+              marginBottom: 0,
             }}>{props.title}</p>
-            <p style={{fontSize: '1.5em', color: '#89bdd3'}}>{props.text}</p>
-          </FadeIn>
-        </div>
+          </div>
+          <p style={{fontSize: '1.5em', color: '#89bdd3'}}>{props.text}</p>
+        </FadeIn>
       </div>
     )
   }
@@ -33,13 +32,16 @@ const Item = (props) => {
   )
 };
 
-Item.propTypes = {
+Summary.propTypes = {
   title: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   color: PropTypes.string,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]).isRequired,
   onEnter: PropTypes.func,
   fadeIn: PropTypes.bool,
 };
 
-export default Item;
+export default Summary;
