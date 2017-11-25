@@ -3,7 +3,7 @@ import Item from '../container/item';
 
 const AboutComponent = (props) => {
   return (
-    <div className='jumbotron' style={{backgroundColor: '#e9ece5'}}>
+    <div className='jumbotron'>
       <div className='container'>
         <div className='row'>
           <div className='col-12 text-center' style={{marginBottom: 30}}>
