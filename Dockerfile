@@ -19,5 +19,4 @@ RUN mkdir -p /usr/src/app/lib
 COPY ./src/ /usr/src/app/src
 COPY ./lib/ /usr/src/app/lib
 
-EXPOSE 8000
 CMD [ "npm", "start" ]

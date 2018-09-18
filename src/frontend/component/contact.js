@@ -15,7 +15,7 @@ const ContactComponent = (props) => {
         <h1 className='text-center'>Contact</h1>
         <div className='container'>
           <div className='row'>
-            <ContactIcon icon='fa-github' href='https://github.com/edwardrowens' text='edwardrowens'
+            <ContactIcon icon='fa-github' href='https://github.com/eddieowens' text='eddieowens'
                          animate={props.animate}/>
             <ContactIcon icon='fa-linkedin-square' href='https://www.linkedin.com/in/edward-owens-9a36aaaa/'
                          text='Edward-Owens-9a36aaaa' animate={props.animate}/>

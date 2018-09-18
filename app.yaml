@@ -1,17 +1,14 @@
-apiVersion: v1
-kind: Deployment
-metadata:
-  name: my-site
-  labels:
-    k8s-app: default-http-backend
-spec:
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        k8s-app: default-http-backend
-    containers:
-    - name: default-http-backend
-      image: edwardrowens/mysite:latest
-      ports:
-      - containerPort: 8000
+runtime: nodejs8
+api_version: 1
+
+handlers:
+- url: /
+  static_files: build/index.html
+  upload: build/index.html
+
+- url: /
+  static_dir: build
+
+- url: /favicon\.ico
+  static_files: build/assets/favicon.png
+  upload: build/assets/favicon.png

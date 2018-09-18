@@ -15,10 +15,12 @@ const SkillsComponent = (props) => {
         <SkillSet title='Languages'>
           <div className='row' style={skillGroupStyle}>
             <Skill name='Java' rating={9}/>
-            <Skill name='JavaScript' rating={7}/>
-            <Skill name='Android' rating={6}/>
+            <Skill name='JavaScript' rating={8}/>
+            <Skill name='Elixir' rating={7}/>
+            <Skill name='SQL' rating={6}/>
+            <Skill name='Go' rating={5}/>
+            <Skill name='Python' rating={5}/>
             <Skill name='C++' rating={5}/>
-            <Skill name='SQL' rating={5}/>
             <Skill name='HTML/CSS' rating={5}/>
           </div>
         </SkillSet>
@@ -27,17 +29,18 @@ const SkillsComponent = (props) => {
             <Skill name='JUnit' rating={10}/>
             <Skill name='Mockito' rating={10}/>
             <Skill name='Spring' rating={8}/>
-            <Skill name='React' rating={7}/>
-            <Skill name='React Native' rating={6}/>
-            <Skill name='Redux' rating={5}/>
-            <Skill name='Redis' rating={5}/>
+            <Skill name='React' rating={8}/>
+            <Skill name='React Native' rating={8}/>
+            <Skill name='Redux' rating={6}/>
+            <Skill name='Apache Pulsar' rating={6}/>
             <Skill name='RabbitMQ' rating={5}/>
           </div>
         </SkillSet>
-        <SkillSet title='Databases'>
+        <SkillSet title='Datastores'>
           <div className='row' style={skillGroupStyle}>
             <Skill name='MySQL' rating={8}/>
             <Skill name='PostgreSQL' rating={6}/>
+            <Skill name='Redis' rating={5}/>
             <Skill name='BigQuery' rating={5}/>
             <Skill name='Elasticsearch' rating={4}/>
             <Skill name='MongoDB' rating={3}/>
@@ -47,10 +50,12 @@ const SkillsComponent = (props) => {
           <div className='row' style={skillGroupStyle}>
             <Skill name='Maven' rating={9}/>
             <Skill name='Git' rating={8}/>
-            <Skill name='AWS' rating={7}/>
+            <Skill name='Jenkins' rating={8}/>
+            <Skill name='AWS' rating={9}/>
             <Skill name='GCP' rating={6}/>
-            <Skill name='Docker' rating={5}/>
-            <Skill name='Kubernetes' rating={4}/>
+            <Skill name='Docker' rating={9}/>
+            <Skill name='Helm' rating={9}/>
+            <Skill name='Kubernetes' rating={7}/>
           </div>
         </SkillSet>
       </div>

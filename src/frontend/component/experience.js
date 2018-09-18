@@ -7,6 +7,13 @@ const ExperienceComponent = (props) => {
     <div className='jumbotron'>
       <h1 className='text-center'>Experience</h1>
       <Job
+        title='Hutch'
+        jobTitle='Senior Software Engineer'
+        date='Dec 2017 - Present'
+        description='/assets/docs/hutch_job_description.md'
+        logo='/assets/hutch.jpg'
+      />
+      <Job
         title='Gimbal'
         jobTitle='Software Engineer'
         date='Aug 2017 - Nov 2017'

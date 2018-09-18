@@ -28,7 +28,7 @@ const AboutComponent = (props) => {
               <Summary icon='fa-graduation-cap' color='#9ad3de' text='June, 2014' title='Graduated UCLA'/>
               <Summary icon='fa-h-square' color='#9ad3de' text={moment().diff('1992-06-17', 'years')} title='Age'/>
               <Summary icon='fa-connectdevelop' color='#9ad3de' text='Cognitive Science' title='Degree'/>
-              <Summary icon='fa-crosshairs' color='#9ad3de' text='Java/JavaScript' title='Focus'/>
+              <Summary icon='fa-crosshairs' color='#9ad3de' text='Backend/Infrastructure' title='Focus'/>
               <Summary icon='fa-server' color='#9ad3de' text={moment().diff('2014-06-14', 'years')}
                        title='Years working backend'/>
               <Summary icon='fa-code' color='#9ad3de' text={moment().diff('2016-09-01', 'years')}
